@@ -9,7 +9,6 @@ import About from './pages/About';
 import Products from './pages/Products';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
-import Materials from './pages/Materials';
 import NotFoundPage from './components/NotFoundPage';
 
 function App() {
@@ -69,15 +68,7 @@ function App() {
                                 <Contact isDark={isDark} />
                             </motion.div>
                         } />
-                        <Route path="/materials" element={
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                            >
-                                <Materials isDark={isDark} />
-                            </motion.div>
-                        } />
+                        
                         
                         {/* 404 Not Found Route - Must be last */}
                         <Route path="*" element={

@@ -27,7 +27,6 @@ const Header = ({ isDark, toggleTheme }) => {
                         <Link to="/" className="hover:text-red-600 transition-colors">Home</Link>
                         <Link to="/about" className="hover:text-red-600 transition-colors">About</Link>
                         <Link to="/products" className="hover:text-red-600 transition-colors">Products</Link>
-                        <Link to="/materials" className="hover:text-red-600 transition-colors">Materials</Link>
                         <Link to="/gallery" className="hover:text-red-600 transition-colors">Gallery</Link>
                         <Link to="/contact" className="hover:text-red-600 transition-colors">Contact</Link>
                     </nav>
