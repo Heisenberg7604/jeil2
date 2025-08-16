@@ -137,21 +137,21 @@ const Gallery = ({ isDark }) => {
             id: 19,
             src: 'https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&w=1200',
             alt: 'Raw Materials',
-            category: 'materials',
+            category: 'production',
             title: 'Quality Raw Materials'
         },
         {
             id: 20,
             src: 'https://images.unsplash.com/photo-1591880907925-b189df2da5d4?auto=format&fit=crop&w=1200',
             alt: 'PP Pellets',
-            category: 'materials',
+            category: 'production',
             title: 'PP Pellets Processing'
         },
         {
             id: 21,
             src: 'https://images.unsplash.com/photo-1620283085439-39aed3b5e4b2?auto=format&fit=crop&w=1200',
             alt: 'PET Resin',
-            category: 'materials',
+            category: 'production',
             title: 'PET Resin Storage'
         },
         {
@@ -193,21 +193,21 @@ const Gallery = ({ isDark }) => {
             id: 27,
             src: 'https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&w=1200',
             alt: 'Raw Materials',
-            category: 'materials',
+            category: 'production',
             title: 'Quality Raw Materials'
         },
         {
             id: 28,
             src: 'https://images.unsplash.com/photo-1591880907925-b189df2da5d4?auto=format&fit=crop&w=1200',
             alt: 'PP Pellets',
-            category: 'materials',
+            category: 'production',
             title: 'PP Pellets Processing'
         },
         {
             id: 29,
             src: 'https://images.unsplash.com/photo-1620283085439-39aed3b5e4b2?auto=format&fit=crop&w=1200',
             alt: 'PET Resin',
-            category: 'materials',
+            category: 'production',
             title: 'PET Resin Storage'
         },
         {
@@ -230,7 +230,6 @@ const Gallery = ({ isDark }) => {
         { id: 'all', name: 'All', icon: Package },
         { id: 'facility', name: 'Facility', icon: Factory },
         { id: 'production', name: 'Production', icon: Package },
-        { id: 'materials', name: 'Materials', icon: Package },
         { id: 'products', name: 'Products', icon: Package }
     ];
 
