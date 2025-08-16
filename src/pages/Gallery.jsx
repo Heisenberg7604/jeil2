@@ -9,55 +9,216 @@ const Gallery = ({ isDark }) => {
     const galleryImages = [
         {
             id: 1,
-            src: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1200',
+            src: 'dist/assets/facility/facility1.jpg',
             alt: 'Manufacturing Facility',
             category: 'facility',
             title: 'State-of-the-art Manufacturing'
         },
         {
             id: 2,
-            src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200',
+            src: 'dist/assets/facility/facility2.JPG',
             alt: 'Production Line',
-            category: 'production',
+            category: 'facility',
             title: 'Production Line Excellence'
         },
         {
             id: 3,
-            src: 'https://images.unsplash.com/photo-1635405074683-96d6921a2a68?auto=format&fit=crop&w=1200',
+            src: 'dist/assets/facility/facility3.jpg',
             alt: 'Stretch Film Production',
-            category: 'products',
+            category: 'facility',
             title: 'Stretch Film Production'
         },
         {
             id: 4,
-            src: 'https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&w=1200',
+            src: 'dist/assets/facility/facility4.jpg',
             alt: 'Raw Materials',
-            category: 'materials',
+            category: 'facility',
             title: 'Quality Raw Materials'
         },
         {
             id: 5,
-            src: 'https://images.unsplash.com/photo-1591880907925-b189df2da5d4?auto=format&fit=crop&w=1200',
+            src: 'dist/assets/facility/facility5.JPG',
             alt: 'PP Pellets',
-            category: 'materials',
+            category: 'facility',
             title: 'PP Pellets Processing'
         },
         {
             id: 6,
-            src: 'https://images.unsplash.com/photo-1620283085439-39aed3b5e4b2?auto=format&fit=crop&w=1200',
+            src: 'dist/assets/facility/facility6.png',
             alt: 'PET Resin',
-            category: 'materials',
+            category: 'facility',
             title: 'PET Resin Storage'
         },
         {
             id: 7,
+            src: 'dist/assets/facility/facility8.JPG',
+            alt: 'PP Film',
+            category: 'facility',
+            title: 'PP Film Manufacturing'
+        },
+        {
+            id: 8,
+            src: 'dist/assets/facility/facility9.jpg',
+            alt: 'Quality Control',
+            category: 'facility',
+            title: 'Quality Control Process'
+        },
+        {
+            id: 9,
+            src: 'dist/assets/facility/facility10.JPG',
+            alt: 'Production Line',
+            category: 'facility',
+            title: 'Production Line Excellence'
+        },
+        {
+            id: 10,
+            src: 'dist/assets/facility/facility11.jpg',
+            alt: 'Stretch Film Production',
+            category: 'facility',
+            title: 'Stretch Film Production'
+        },
+        {
+            id: 11,
+            src: 'dist/assets/facility/facility12.jpg',
+            alt: 'Raw Materials',
+            category: 'facility',
+            title: 'Quality Raw Materials'
+        },
+        {
+            id: 12,
+            src: 'dist/assets/facility/bales.png',
+            alt: 'PP Pellets',
+            category: 'facility',
+            title: 'PP Pellets Processing'
+        },
+        {
+            id: 13,
+            src: 'dist/assets/facility/blown-plant.jpg',
+            alt: 'PET Resin',
+            category: 'facility',
+            title: 'PET Resin Storage'
+        },
+        {
+            id: 14,
             src: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200',
             alt: 'PP Film',
             category: 'products',
             title: 'PP Film Manufacturing'
         },
         {
-            id: 8,
+            id: 15,
+            src: 'https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=1200',
+            alt: 'Quality Control',
+            category: 'facility',
+            title: 'Quality Control Process'
+        },
+        {
+            id: 16,
+            src: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1200',
+            alt: 'Manufacturing Facility',
+            category: 'facility',
+            title: 'State-of-the-art Manufacturing'
+        },
+        {
+            id: 17,
+            src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200',
+            alt: 'Production Line',
+            category: 'production',
+            title: 'Production Line Excellence'
+        },
+        {
+            id: 18,
+            src: 'https://images.unsplash.com/photo-1635405074683-96d6921a2a68?auto=format&fit=crop&w=1200',
+            alt: 'Stretch Film Production',
+            category: 'products',
+            title: 'Stretch Film Production'
+        },
+        {
+            id: 19,
+            src: 'https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&w=1200',
+            alt: 'Raw Materials',
+            category: 'materials',
+            title: 'Quality Raw Materials'
+        },
+        {
+            id: 20,
+            src: 'https://images.unsplash.com/photo-1591880907925-b189df2da5d4?auto=format&fit=crop&w=1200',
+            alt: 'PP Pellets',
+            category: 'materials',
+            title: 'PP Pellets Processing'
+        },
+        {
+            id: 21,
+            src: 'https://images.unsplash.com/photo-1620283085439-39aed3b5e4b2?auto=format&fit=crop&w=1200',
+            alt: 'PET Resin',
+            category: 'materials',
+            title: 'PET Resin Storage'
+        },
+        {
+            id: 22,
+            src: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200',
+            alt: 'PP Film',
+            category: 'products',
+            title: 'PP Film Manufacturing'
+        },
+        {
+            id: 23,
+            src: 'https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=1200',
+            alt: 'Quality Control',
+            category: 'facility',
+            title: 'Quality Control Process'
+        },
+        {
+            id: 24,
+            src: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1200',
+            alt: 'Manufacturing Facility',
+            category: 'facility',
+            title: 'State-of-the-art Manufacturing'
+        },
+        {
+            id: 25,
+            src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200',
+            alt: 'Production Line',
+            category: 'production',
+            title: 'Production Line Excellence'
+        },
+        {
+            id: 26,
+            src: 'https://images.unsplash.com/photo-1635405074683-96d6921a2a68?auto=format&fit=crop&w=1200',
+            alt: 'Stretch Film Production',
+            category: 'products',
+            title: 'Stretch Film Production'
+        },
+        {
+            id: 27,
+            src: 'https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&w=1200',
+            alt: 'Raw Materials',
+            category: 'materials',
+            title: 'Quality Raw Materials'
+        },
+        {
+            id: 28,
+            src: 'https://images.unsplash.com/photo-1591880907925-b189df2da5d4?auto=format&fit=crop&w=1200',
+            alt: 'PP Pellets',
+            category: 'materials',
+            title: 'PP Pellets Processing'
+        },
+        {
+            id: 29,
+            src: 'https://images.unsplash.com/photo-1620283085439-39aed3b5e4b2?auto=format&fit=crop&w=1200',
+            alt: 'PET Resin',
+            category: 'materials',
+            title: 'PET Resin Storage'
+        },
+        {
+            id: 30,
+            src: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200',
+            alt: 'PP Film',
+            category: 'products',
+            title: 'PP Film Manufacturing'
+        },
+        {
+            id: 31,
             src: 'https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=1200',
             alt: 'Quality Control',
             category: 'facility',
