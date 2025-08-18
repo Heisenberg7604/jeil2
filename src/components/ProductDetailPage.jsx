@@ -10,14 +10,15 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
     const productData = {
         'fibc': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "JEIL is capable of producing PP woven Fabric from 50 gsm to 200 gsm that can be used for a variety of applications, such as small bag, making tarapaulins, grain covers, car covers and many others.",
             features: [
                
             ],
             applications: [
-
+                
             ],
             specifications: {
                
@@ -25,137 +26,196 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'pp-woven': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "JEIL is capable of producing PP woven Fabric from 50 gsm to 200 gsm that can be used for a variety of applications, such as small bag, making tarapaulins, grain covers, car covers and many others.",
             features: [
-               
+                "PP Fabric in Roll forms & Bags",
+                "Available from 50 gsm to 200 gsm",
+                "Four colour flexographic printing",
+                "Can be coated up to width 3000mm"
             ],
             applications: [
-
+                "Small bags",
+                "Tarapaulins", 
+                "Grain covers",
+                "Car covers"
             ],
             specifications: {
-               
+                "Width": "300mm to 1500mm (tubular) / 600mm to 3000mm (Slit open)",
+                "GSM Range": "50 gsm to 200 gsm",
+                "Printing": "Four colour flexographic"
             }
         },
         'stretch-wrap': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "High performance stretch wrap (pallet wrap) film for wrapping boxes or items that have been accumulated on a pallet. Our lines of stretch films are made for performance and value.",
             features: [
-               
+                "High performance stretch wrap film",
+                "Made for performance and value",
+                "Simple wrapping process",
+                "Provides excellent stability"
             ],
             applications: [
-
+                "Pallet wrapping",
+                "Box wrapping",
+                "Item stabilization",
+                "Storage and transit protection"
             ],
             specifications: {
-               
+                "Thickness": "13 microns to 200 microns",
+                "Width": "50 mm to 3000 mm",
+                "Yield": "up to 200% – 300%"
             }
         },
         'polymer-masking': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "A multilayer plastic film with a special type of polymer having adhesive property on one side. Used for protection of a product's surface from dust, scratches and damage during manufacturing, handling and transportation.",
             features: [
-               
+                "Multilayer plastic film",
+                "Special polymer with adhesive property",
+                "Protects from dust and scratches",
+                "Easy application and removal"
             ],
             applications: [
-
+                "Polycarbonate Sheets protection",
+                "Acrylic Sheet protection", 
+                "PVC, PP, HDPE Sheet protection",
+                "High Gloss Metal Sheet protection"
             ],
             specifications: {
-               
+                "Type": "Multilayer plastic film",
+                "Adhesive": "One side polymer adhesive",
+                "Protection": "Dust, scratches, damage"
             }
         },
         'vci-stretch': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "All-in-one anti-corrosive poly-film designed to be most effective in case of multi-metal products. Special multi-layer technology that exceeds in performance compared to other available VCI films.",
             features: [
-               
+                "Anti-corrosive poly-film",
+                "Multi-layer technology",
+                "Exceeds performance vs other VCI films",
+                "Available in multiple forms"
             ],
             applications: [
-
+                "Multi-metal products",
+                "Steel wires protection",
+                "Rods protection",
+                "Tubes protection"
             ],
             specifications: {
-               
+                "Thickness": "23 mic to 100 mic",
+                "Film Width": "75 mm to 1200 mm",
+                "Core ID": "76 mm +/-1",
+                "Forms": "VCI Rolls, VCI bags, VCI sheet"
             }
         },
         'breathable': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "A film which is at least slightly permeable to gases due to the presence of open cells throughout its mass or to perforations. Can be laminated with non-woven web to produce soft, textile like composite.",
             features: [
-               
+                "Permeable to gases",
+                "Open cell structure",
+                "Can be laminated with non-woven web",
+                "Creates soft, textile-like composite"
             ],
             applications: [
-
+                "Laminated composites",
+                "Textile-like materials",
+                "Breathable packaging",
+                "Industrial applications"
             ],
             specifications: {
-               
+                "Permeability": "Gas permeable",
+                "Structure": "Open cells or perforations",
+                "Lamination": "Compatible with non-woven web"
             }
         },
         'pvc-cling': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "PVC/PE cling film has become a major contributor to food safety, protecting meat and dairy products from micro-organisms that breed quickly when food is left uncovered.",
             features: [
-               
+                "Major contributor to food safety",
+                "Protects from micro-organisms",
+                "Widely used for fresh meat wrapping",
+                "Suitable for food storage"
             ],
             applications: [
-
+                "Fresh meat wrapping in supermarkets",
+                "Food storage in catering",
+                "Home food protection",
+                "Dairy product protection"
             ],
             specifications: {
-               
-            }
-        },
-        'pvc-industrial': {
-            images: [
-                
-            ],
-            fullDescription: "",
-            features: [
-               
-            ],
-            applications: [
-
-            ],
-            specifications: {
-               
+                "Width": "100 mm to 1000 mm",
+                "Thickness": "10 microns to 80 microns",
+                "Material": "PVC/PE"
             }
         },
         'anti-fog': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "Films with proprietary agent that keeps products free from condensation of grease. Modified films that have high affinity for water, forming a continuous thin layer over the surface.",
             features: [
-               
+                "Proprietary anti-fog agent",
+                "High affinity for water",
+                "Continuous thin water layer formation",
+                "Infrared absorber properties"
             ],
             applications: [
-
+                "Condensation prevention",
+                "Grease-free protection",
+                "Food packaging",
+                "Industrial applications"
             ],
             specifications: {
-               
+                "Agent": "Proprietary anti-fog",
+                "Water affinity": "High",
+                "Layer formation": "Continuous thin water layer"
             }
         },
         'garbage-bags': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "Disposable bags used to contain rubbish, trash or garbage. Made out of plastic and typically in black colour. Convenient and sanitary way of handling garbage.",
             features: [
-               
+                "Disposable plastic bags",
+                "Convenient and sanitary",
+                "Lightweight design",
+                "Odour minimization when wrapped"
             ],
             applications: [
-
+                "Household waste disposal",
+                "Commercial garbage collection",
+                "Messy or wet rubbish",
+                "Odour control"
             ],
             specifications: {
-               
+                "Size": "As per requirement",
+                "Thickness": "As per requirement",
+                "Material": "Plastic",
+                "Color": "Typically black"
             }
         },
         'pp-roofing': {
@@ -163,109 +223,179 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                 'dist/assets/products/PP_roofingsheet.jpg',
                 'dist/assets/facility/bales.png',
             ],
-            fullDescription: "Advanced polymer bonded masking film designed for protecting sensitive surfaces during processing, painting, and finishing operations. This high-performance film provides excellent adhesion and clean removal without residue.",
+            fullDescription: "Wide range of PP UV coated roofing sheets available in printed and textured designs. Offering multiple design options for various roofing applications.",
             features: [
-                "Multi colour printed : 20 desings.",
-                "Textured : glossy/fine matt/ frosted / leather/ diamond/ PC emboss (dip emboss) / PC line etc."
+                "PP UV coated roofing sheets",
+                "Multi colour printed: 20 designs",
+                "Multiple texture options",
+                "UV protection coating"
             ],
             applications: [
                 "Gate sheet",
                 "Elevation", 
-                "Car Parking Shed"
+                "Car Parking Shed",
+                "Roofing applications"
             ],
             specifications: {
-                "Thickness": "0.7 - 3 microns",
-                "Width": "upto 1500 mm"
+                "Width": "up to 32\"",
+                "Thickness": "up to 2mm",
+                "Length": "up to 12 feet",
+                "Designs": "20 printed designs available",
+                "Textures": "Glossy/fine matt/frosted/leather/diamond/PC emboss/PC line"
             }
         },
         'pp-door': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "Both side textured rigid PP sheets designed for various interior applications including partitions, false ceiling, bathroom doors, and wall cladding.",
             features: [
-               
+                "Both side textured",
+                "Rigid PP material",
+                "Multiple size options",
+                "Versatile applications"
             ],
             applications: [
-
+                "Partition walls",
+                "False ceiling", 
+                "Bathroom doors",
+                "Wall cladding"
             ],
             specifications: {
-               
+                "Thickness": "2.5 mm to 4 mm",
+                "Sizes": "6'x 2' / 6' x 2.5' / 6' x 3' / 8' x 4'",
+                "Material": "Rigid PP",
+                "Texture": "Both sides"
             }
         },
         'slip-sheet': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "Used for pallet-less material handling. When placed under an object allows it to be mobilized. Special surface properties for optimal load handling.",
             features: [
-               
+                "Pallet-less material handling",
+                "Higher COF on top surface",
+                "Lower COF on bottom surface",
+                "100% reusable and recyclable"
             ],
             applications: [
-
+                "Material handling",
+                "Forklift operations",
+                "Warehouse optimization",
+                "Load mobilization"
             ],
             specifications: {
-               
+                "Material handling": "Pallet-less system",
+                "Reusability": "100% reusable and recyclable",
+                "Moisture resistance": "Yes",
+                "Bacteria resistance": "Yes",
+                "Cost": "Cheaper than wooden pallets"
             }
         },
         'hips-sheet': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "High impact polystyrene with high dielectric strength, widely used for thermoforming applications in furniture, electrical housing, and various industrial parts.",
             features: [
-               
+                "High impact polystyrene",
+                "High dielectric strength",
+                "Thermoforming capability",
+                "Versatile applications"
             ],
             applications: [
-
+                "Seat back and base for molded furniture",
+                "Electrical housing thermoforming",
+                "Refrigeration industry sheets",
+                "Publicity and display boards",
+                "Disposables and vacuum formed trays"
             ],
             specifications: {
-               
+                "Thickness": "0.35 mm to 3 mm",
+                "Width": "Up to 1500 mm",
+                "Material": "High Impact Polystyrene",
+                "Dielectric strength": "High"
             }
         },
         'pp-box-strapping': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "Strapping rolls made from PP materials with high shining and strength, widely used in various industries and home applications for efficient binding.",
             features: [
-               
+                "Made from PP materials",
+                "High shining and strength",
+                "Highest strength to weight ratio",
+                "Economical and efficient"
             ],
             applications: [
-
+                "Industrial strapping",
+                "Home applications",
+                "Box binding",
+                "Package securing"
             ],
             specifications: {
-               
+                "Width": "6mm to 19mm",
+                "Thickness": "0.5mm to 1mm",
+                "Length": "As per requirement",
+                "Material": "PP",
+                "Grades": "Fully automatic, semi automatic, manual",
+                "Colors": "Natural, white opaque, coloured and printed"
             }
         },
         'air-bubble': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "Transparent plastic material commonly used for packing fragile items. Provides cushioning through bubbles of different sizes for various protection levels.",
             features: [
-               
+                "Transparent plastic material",
+                "Multiple bubble sizes available",
+                "Excellent cushioning properties",
+                "Multiple layers for added protection"
             ],
             applications: [
-
+                "Packing fragile items",
+                "Electronic products protection",
+                "Shock absorption during transit",
+                "Sensitive object cushioning"
             ],
             specifications: {
-               
+                "Width": "up to 1.5 meter",
+                "Thickness": "200 gauge to 600 gauge",
+                "Material": "Transparent plastic",
+                "Bubble sizes": "Multiple sizes available"
             }
         },
         'ldpe-shrink': {
             images: [
-                
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
             ],
-            fullDescription: "",
+            fullDescription: "High performance bulk packaging film providing excellent protection and stability during storage and transit. Cost effective alternative to carton or paper packaging.",
             features: [
-               
+                "High performance bulk packaging",
+                "Excellent protection and stability",
+                "Made from high performance LDPE granules",
+                "Cost effective alternative"
             ],
             applications: [
-
+                "Industrial wrapping",
+                "Wooden planks protection",
+                "Electronic goods in cartons",
+                "Loose pallet loads"
             ],
             specifications: {
-               
+                "Thickness": "30mic to 75mic",
+                "Width": "300mm to 1450mm (tubular)",
+                "Material": "High performance LDPE granules",
+                "Packaging": "Bulk packaging film"
             }
         },
     };
@@ -410,10 +540,10 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                                 <h3 className={`text-xl font-semibold mb-4 ${isDark ? 'text-white' : 'text-gray-800'}`}>
                                     Key Features
                                 </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <div className="grid grid-cols-1 gap-2">
                                     {features.map((feature, index) => (
                                         <div key={index} className="flex items-center space-x-2">
-                                            <Shield className={`w-4 h-4 ${isDark ? 'text-red-400' : 'text-red-600'}`} />
+                                            <Shield className={`w-4 h-4 flex-shrink-0 ${isDark ? 'text-red-400' : 'text-red-600'}`} />
                                             <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                                                 {feature}
                                             </span>
@@ -429,10 +559,10 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                                 <h3 className={`text-xl font-semibold mb-4 ${isDark ? 'text-white' : 'text-gray-800'}`}>
                                     Applications
                                 </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <div className="grid grid-cols-1 gap-2">
                                     {applications.map((app, index) => (
                                         <div key={index} className="flex items-center space-x-2">
-                                            <Truck className={`w-4 h-4 ${isDark ? 'text-red-400' : 'text-red-600'}`} />
+                                            <Truck className={`w-4 h-4 flex-shrink-0 ${isDark ? 'text-red-400' : 'text-red-600'}`} />
                                             <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                                                 {app}
                                             </span>
