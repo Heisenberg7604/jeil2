@@ -107,14 +107,34 @@ const Footer = ({ isDark }) => {
                                     Ankleshwar - 393 002, Gujarat - INDIA
                                 </a>
                             </li>
-                            <li className="flex items-center">
-                                <Phone className="w-5 h-5 mr-3 text-red-500 flex-shrink-0" />
-                                <a
-                                    href="tel:+912646221134"
-                                    className="text-sm hover:text-red-400 transition-colors cursor-pointer"
-                                >
-                                    +91 2646 221134, 222163, 251083
-                                </a>
+                            <li className="flex items-start">
+                                <Phone className="w-5 h-5 mr-3 text-red-500 flex-shrink-0 mt-1" />
+                                <div className="text-sm space-y-1">
+                                    <div>
+                                        <a
+                                            href="tel:+912646221134"
+                                            className="hover:text-red-400 transition-colors cursor-pointer block"
+                                        >
+                                            +91 2646 221134
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a
+                                            href="tel:+912646222163"
+                                            className="hover:text-red-400 transition-colors cursor-pointer block"
+                                        >
+                                            +91 2646 222163
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a
+                                            href="tel:+912646251083"
+                                            className="hover:text-red-400 transition-colors cursor-pointer block"
+                                        >
+                                            +91 2646 251083
+                                        </a>
+                                    </div>
+                                </div>
                             </li>
                             <li className="flex items-center">
                                 <Mail className="w-5 h-5 mr-3 text-red-500 flex-shrink-0" />
@@ -157,14 +177,26 @@ const Footer = ({ isDark }) => {
                                     U.T. Pin - 396 193. INDIA
                                 </a>
                             </li>
-                            <li className="flex items-center">
-                                <Phone className="w-5 h-5 mr-3 text-red-500 flex-shrink-0" />
-                                <a
-                                    href="tel:+912602669408"
-                                    className="text-sm hover:text-red-400 transition-colors cursor-pointer"
-                                >
-                                    +91 260 2669408 / 6453234
-                                </a>
+                            <li className="flex items-start">
+                                <Phone className="w-5 h-5 mr-3 text-red-500 flex-shrink-0 mt-1" />
+                                <div className="text-sm space-y-1">
+                                    <div>
+                                        <a
+                                            href="tel:+912602669408"
+                                            className="hover:text-red-400 transition-colors cursor-pointer block"
+                                        >
+                                            +91 260 2669408
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a
+                                            href="tel:+912606453234"
+                                            className="hover:text-red-400 transition-colors cursor-pointer block"
+                                        >
+                                            +91 260 6453234
+                                        </a>
+                                    </div>
+                                </div>
                             </li>
                             <li className="flex items-center">
                                 <Mail className="w-5 h-5 mr-3 text-red-500 flex-shrink-0" />
