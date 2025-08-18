@@ -1,17 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
         <div className="relative h-screen">
-            {/* Background Image */}
-            <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=2000')",
-                }}
-            >
+            {/* Background Video */}
+            <div className="absolute inset-0 overflow-hidden">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover"
+                >
+                    <source src="/dist/assets/hero.webm" type="video/webm" />
+                </video>
                 <div className="absolute inset-0 bg-black bg-opacity-50" />
             </div>
 
@@ -22,27 +27,41 @@ const Hero = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-4xl md:text-6xl font-bold text-white mb-6"
+                        className="text-5xl md:text-7xl font-bold text-white mb-6"
                     >
-                        Leading Packaging Solutions
+                        Innovative Packaging Solutions
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
-                        className="text-xl text-gray-200 mb-12 max-w-2xl mx-auto"
+                        className="text-xl md:text-2xl text-gray-200 mb-12 max-w-2xl mx-auto"
                     >
-                        Quality packaging products for all your industrial needs
+                        Elevating your products with premium quality packaging solutions for the modern industry
                     </motion.p>
-                    <motion.button
+                    <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6 }}
-                        whileHover={{ scale: 1.05 }}
-                        className="bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-red-700 transition-colors"
+                        className="flex flex-col sm:flex-row items-center justify-center gap-4"
                     >
-                        Explore Our Products
-                    </motion.button>
+                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                            <Link
+                                to="/products"
+                                className="bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-red-700 transition-colors inline-block"
+                            >
+                                Explore Products
+                            </Link>
+                        </motion.div>
+                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                            <Link
+                                to="/contact"
+                                className="px-8 py-4 rounded-lg text-lg font-medium border-2 border-white text-white hover:bg-white/10 transition-colors inline-block"
+                            >
+                                Contact Us
+                            </Link>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </div>
 

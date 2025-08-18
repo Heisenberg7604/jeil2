@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, X, Package, Shield, Truck, Award, ArrowLeft } from 'lucide-react';
+import { Package, ChevronLeft, ChevronRight, X, Shield, Truck, Award, ArrowLeft } from 'lucide-react';
 
 const ProductDetailPage = ({ product, isDark, onClose }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -10,94 +10,264 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
     const productData = {
         'fibc': {
             images: [
-                'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1200',
-                'https://images.unsplash.com/photo-1535813547-3e2f90a94d3c?auto=format&fit=crop&w=1200',
-                'https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=1200'
+                
             ],
-            fullDescription: "Our FIBC (Flexible Intermediate Bulk Container) jumbo bags are designed for heavy-duty industrial packaging needs. These robust containers offer exceptional strength and reliability for transporting bulk materials safely and efficiently. Made from high-quality woven polypropylene fabric, they provide excellent resistance to tears and punctures.",
+            fullDescription: "",
             features: [
-                "Heavy-duty construction for industrial use",
-                "Multiple lifting loop configurations",
-                "Food-grade and non-food grade options",
-                "Customizable sizes and specifications",
-                "UN certification available",
-                "Conductive and anti-static options"
+               
             ],
             applications: [
-                "Chemical powders and granules",
-                "Agricultural products",
-                "Construction materials",
-                "Food ingredients",
-                "Pharmaceutical products",
-                "Mining materials"
+
             ],
             specifications: {
-                "Safe Working Load": "500kg - 2000kg",
-                "Safety Factor": "5:1 or 6:1",
-                "Fabric Weight": "140gsm - 200gsm",
-                "Loop Type": "4 corner loops, 2 stevedore loops",
-                "Discharge": "Flat bottom, duffle top, spout bottom",
-                "Dimensions": "90x90x110cm (customizable)",
-                "Material": "100% Virgin PP woven fabric",
-                "Color": "White, Beige (custom colors available)"
+               
+            }
+        },
+        'pp-woven': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
             }
         },
         'stretch-wrap': {
             images: [
-                'https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=1200',
-                'https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&w=1200'
+                
             ],
-            fullDescription: "High-performance stretch wrapping film designed for superior load containment and protection. Our stretch films offer excellent puncture resistance and cling properties, ensuring your products remain secure during transport and storage.",
+            fullDescription: "",
             features: [
-                "Superior load holding force",
-                "Excellent puncture resistance",
-                "High clarity for easy identification",
-                "Consistent unwind and cling",
-                "UV stabilized options",
-                "Machine and hand wrap grades"
+               
             ],
             applications: [
-                "Pallet wrapping",
-                "Bundling products",
-                "Weather protection",
-                "Dust and moisture barrier",
-                "Tamper evidence",
-                "Load stabilization"
+
             ],
             specifications: {
-                "Thickness": "12 - 25 microns",
-                "Width": "450mm - 500mm",
-                "Core Size": "38mm, 50mm, 76mm",
-                "Roll Length": "300m - 1500m",
-                "Stretch Rate": "200% - 300%",
-                "Tensile Strength": "≥ 40 N/mm²",
-                "Puncture Resistance": "≥ 200g",
-                "Cling Level": "Low, Medium, High"
+               
+            }
+        },
+        'polymer-masking': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
+            }
+        },
+        'vci-stretch': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
+            }
+        },
+        'breathable': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
+            }
+        },
+        'pvc-cling': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
+            }
+        },
+        'pvc-industrial': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
+            }
+        },
+        'anti-fog': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
+            }
+        },
+        'garbage-bags': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
+            }
+        },
+        'pp-roofing': {
+            images: [
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
+            ],
+            fullDescription: "Advanced polymer bonded masking film designed for protecting sensitive surfaces during processing, painting, and finishing operations. This high-performance film provides excellent adhesion and clean removal without residue.",
+            features: [
+                "Multi colour printed : 20 desings.",
+                "Textured : glossy/fine matt/ frosted / leather/ diamond/ PC emboss (dip emboss) / PC line etc."
+            ],
+            applications: [
+                "Gate sheet",
+                "Elevation", 
+                "Car Parking Shed"
+            ],
+            specifications: {
+                "Thickness": "0.7 - 3 microns",
+                "Width": "upto 1500 mm"
+            }
+        },
+        'pp-door': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
+            }
+        },
+        'slip-sheet': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
+            }
+        },
+        'hips-sheet': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
+            }
+        },
+        'pp-box-strapping': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
             }
         },
         'air-bubble': {
             images: [
-                'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1200'
+                
             ],
-            fullDescription: "Premium air bubble film providing exceptional cushioning protection for fragile items during shipping and storage. The unique bubble structure absorbs shock and vibration, making it ideal for protecting delicate products.",
+            fullDescription: "",
             features: [
-                "Excellent shock absorption",
-                "Lightweight protective packaging",
-                "Moisture resistant",
-                "Reusable and recyclable",
-                "Various bubble sizes available",
-                "Anti-static options"
+               
             ],
             applications: [
-                "Electronics packaging",
-                "Glassware protection",
-                "Furniture wrapping",
-                "Automotive parts",
-                "Artwork and frames",
-                "General fragile items"
-            ]
-            // Note: No specifications table for this product
-        }
+
+            ],
+            specifications: {
+               
+            }
+        },
+        'ldpe-shrink': {
+            images: [
+                
+            ],
+            fullDescription: "",
+            features: [
+               
+            ],
+            applications: [
+
+            ],
+            specifications: {
+               
+            }
+        },
     };
 
     const currentProduct = productData[product?.id] || {};

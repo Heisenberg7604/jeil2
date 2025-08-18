@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Package, Mail, Phone, MapPin, Globe, Facebook, Twitter, Linkedin, Instagram, ChevronRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, Facebook, Twitter, Linkedin, Instagram, ChevronRight } from 'lucide-react';
 
 const Footer = ({ isDark }) => {
     const currentYear = new Date().getFullYear();
@@ -12,17 +12,18 @@ const Footer = ({ isDark }) => {
     };
 
     return (
-        <footer className={`${isDark ? 'bg-gray-800 text-gray-200' : 'bg-gray-900 text-gray-200'}`}>
+        <footer className={`mt-8 ${isDark ? 'bg-gray-900 text-gray-200 shadow-lg' : 'bg-transparent text-white shadow-lg'}`}>
             {/* Main Footer */}
-            <div className="container mx-auto px-4 py-12">
+            <div className={`container mx-auto px-4 py-12 ${isDark ? 'bg-gray-800' : 'bg-gray-800'} rounded-t-3xl`}>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Company Info */}
                     <div>
-                        <div className="flex items-center space-x-2 mb-6">
-                            <div className={`p-2 rounded-full ${isDark ? 'bg-red-500' : 'bg-red-600'}`}>
-                                <Package className="w-6 h-6 text-white" />
-                            </div>
-                            <span className="text-2xl font-bold text-white">JEIL</span>
+                        <div className="flex items-center mb-4">
+                            <img
+                                src="/dist/assets/cropped-jeil-logo.jpg"
+                                alt="JEIL Logo"
+                                className="w-28 h-28 object-contain"
+                            />
                         </div>
                         <p className="mb-6 text-gray-400">
                             JAGANNATH EXTRUSION INDIA LTD. and PATKAR EXTRUSIONS LTD. are pioneering forces in the packaging industry, delivering innovative solutions since 2010.
@@ -213,7 +214,7 @@ const Footer = ({ isDark }) => {
             </div>
 
             {/* Certification Badges */}
-            <div className={`py-6 ${isDark ? 'bg-gray-700' : 'bg-gray-800'}`}>
+            <div className={`py-6 ${isDark ? 'bg-gray-700' : 'bg-gray-800'} border-t border-gray-600 shadow-inner`}>
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap justify-center md:justify-between items-center gap-6">
                         <div className="flex items-center space-x-8">
@@ -238,7 +239,7 @@ const Footer = ({ isDark }) => {
             </div>
 
             {/* Copyright */}
-            <div className={`py-4 ${isDark ? 'bg-gray-900' : 'bg-black'}`}>
+            <div className={`py-4 ${isDark ? 'bg-gray-900' : 'bg-black'} border-t border-gray-700`}>
                 <div className="container mx-auto px-4">
                     <div className="flex justify-center items-center">
                         <p className="text-sm text-gray-500">
