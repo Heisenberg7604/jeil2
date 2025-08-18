@@ -6,6 +6,11 @@ import { Package, Mail, Phone, MapPin, Globe, Facebook, Twitter, Linkedin, Insta
 const Footer = ({ isDark }) => {
     const currentYear = new Date().getFullYear();
 
+    // Utility function to encode address for Google Maps
+    const encodeAddressForMaps = (address) => {
+        return encodeURIComponent(address);
+    };
+
     return (
         <footer className={`${isDark ? 'bg-gray-800 text-gray-200' : 'bg-gray-900 text-gray-200'}`}>
             {/* Main Footer */}
@@ -24,28 +29,36 @@ const Footer = ({ isDark }) => {
                         </p>
                         <div className="flex space-x-4">
                             <motion.a
-                                href="#"
+                                href="https://facebook.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 whileHover={{ scale: 1.1 }}
                                 className={`p-2 rounded-full ${isDark ? 'bg-gray-700 hover:bg-red-500' : 'bg-gray-800 hover:bg-red-600'} transition-colors`}
                             >
                                 <Facebook size={18} />
                             </motion.a>
                             <motion.a
-                                href="#"
+                                href="https://twitter.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 whileHover={{ scale: 1.1 }}
                                 className={`p-2 rounded-full ${isDark ? 'bg-gray-700 hover:bg-red-500' : 'bg-gray-800 hover:bg-red-600'} transition-colors`}
                             >
                                 <Twitter size={18} />
                             </motion.a>
                             <motion.a
-                                href="#"
+                                href="https://linkedin.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 whileHover={{ scale: 1.1 }}
                                 className={`p-2 rounded-full ${isDark ? 'bg-gray-700 hover:bg-red-500' : 'bg-gray-800 hover:bg-red-600'} transition-colors`}
                             >
                                 <Linkedin size={18} />
                             </motion.a>
                             <motion.a
-                                href="#"
+                                href="https://instagram.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 whileHover={{ scale: 1.1 }}
                                 className={`p-2 rounded-full ${isDark ? 'bg-gray-700 hover:bg-red-500' : 'bg-gray-800 hover:bg-red-600'} transition-colors`}
                             >
@@ -62,7 +75,6 @@ const Footer = ({ isDark }) => {
                                 { name: 'Home', path: '/' },
                                 { name: 'About Us', path: '/about' },
                                 { name: 'Products', path: '/products' },
-                                { name: 'Materials', path: '/materials' },
                                 { name: 'Gallery', path: '/gallery' },
                                 { name: 'Contact', path: '/contact' }
                             ].map((link) => (
@@ -79,54 +91,91 @@ const Footer = ({ isDark }) => {
                         </ul>
                     </div>
 
-                    {/* Contact Info */}
+                    {/* Corporate Office */}
                     <div>
-                        <h3 className="text-xl font-semibold mb-6 text-white">Contact Us</h3>
-                        <ul className="space-y-4">
+                        <h3 className="text-xl font-semibold mb-6 text-white">Corporate Office</h3>
+                        <ul className="space-y-3">
                             <li className="flex items-start">
                                 <MapPin className="w-5 h-5 mr-3 text-red-500 flex-shrink-0 mt-1" />
-                                <span>
-                                    123 Industrial Area, Phase II<br />
-                                    Gujarat, India 380015
-                                </span>
+                                <a
+                                    href={`https://www.google.com/maps/search/?api=1&query=${encodeAddressForMaps('C1B - 1034 to 1037 GIDC Industrial Estate, Ankleshwar - 393 002, Gujarat, INDIA')}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm hover:text-red-400 transition-colors cursor-pointer"
+                                >
+                                    C1B - 1034 to 1037 GIDC Industrial Estate,
+                                    Ankleshwar - 393 002, Gujarat - INDIA
+                                </a>
                             </li>
                             <li className="flex items-center">
                                 <Phone className="w-5 h-5 mr-3 text-red-500 flex-shrink-0" />
-                                <span>+91 XXXXXXXXXX</span>
+                                <a
+                                    href="tel:+912646221134"
+                                    className="text-sm hover:text-red-400 transition-colors cursor-pointer"
+                                >
+                                    +91 2646 221134, 222163, 251083
+                                </a>
                             </li>
                             <li className="flex items-center">
                                 <Mail className="w-5 h-5 mr-3 text-red-500 flex-shrink-0" />
-                                <span>info@jeil.in</span>
+                                <a
+                                    href="mailto:info@pelwrap.com"
+                                    className="text-sm hover:text-red-400 transition-colors cursor-pointer"
+                                >
+                                    info@pelwrap.com
+                                </a>
                             </li>
                             <li className="flex items-center">
                                 <Globe className="w-5 h-5 mr-3 text-red-500 flex-shrink-0" />
-                                <span>www.jeil.in</span>
+                                <a
+                                    href="https://www.jeil.in"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm hover:text-red-400 transition-colors cursor-pointer"
+                                >
+                                    www.jeil.in
+                                </a>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Newsletter */}
+                    {/* Works: Unit-1 */}
                     <div>
-                        <h3 className="text-xl font-semibold mb-6 text-white">Newsletter</h3>
-                        <p className="mb-4 text-gray-400">
-                            Subscribe to our newsletter to receive updates on new products, special offers, and industry insights.
-                        </p>
-                        <form className="space-y-3">
-                            <div>
-                                <input
-                                    type="email"
-                                    placeholder="Your email address"
-                                    className={`w-full px-4 py-2 rounded-lg ${isDark ? 'bg-gray-700 border-gray-600' : 'bg-gray-800 border-gray-700'
-                                        } focus:outline-none focus:ring-2 focus:ring-red-500`}
-                                />
-                            </div>
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                className="w-full py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white transition-colors"
-                            >
-                                Subscribe
-                            </motion.button>
-                        </form>
+                        <h3 className="text-xl font-semibold mb-6 text-white">Works</h3>
+                        <ul className="space-y-3">
+                            <li className="flex items-start">
+                                <MapPin className="w-5 h-5 mr-3 text-red-500 flex-shrink-0 mt-1" />
+                                <a
+                                    href={`https://www.google.com/maps/search/?api=1&query=${encodeAddressForMaps('Survey No: 40/1, Shed No-1, Dadra Village, Dadra Nagar Haveli, SILVASSA, U.T. Pin - 396 193, INDIA')}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm hover:text-red-400 transition-colors cursor-pointer"
+                                >
+                                    Survey No: 40/1, Shed No-1,<br />
+                                    Dadra Village, Dadra Nagar Haveli,<br />
+                                    SILVASSA.<br />
+                                    U.T. Pin - 396 193. INDIA
+                                </a>
+                            </li>
+                            <li className="flex items-center">
+                                <Phone className="w-5 h-5 mr-3 text-red-500 flex-shrink-0" />
+                                <a
+                                    href="tel:+912602669408"
+                                    className="text-sm hover:text-red-400 transition-colors cursor-pointer"
+                                >
+                                    +91 260 2669408 / 6453234
+                                </a>
+                            </li>
+                            <li className="flex items-center">
+                                <Mail className="w-5 h-5 mr-3 text-red-500 flex-shrink-0" />
+                                <a
+                                    href="mailto:extrusion_India@yahoo.co.in"
+                                    className="text-sm hover:text-red-400 transition-colors cursor-pointer"
+                                >
+                                    extrusion_India@yahoo.co.in
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -159,15 +208,10 @@ const Footer = ({ isDark }) => {
             {/* Copyright */}
             <div className={`py-4 ${isDark ? 'bg-gray-900' : 'bg-black'}`}>
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col md:flex-row justify-between items-center">
+                    <div className="flex justify-center items-center">
                         <p className="text-sm text-gray-500">
                             &copy; {currentYear} JEIL. All rights reserved.
                         </p>
-                        <div className="flex space-x-4 mt-3 md:mt-0">
-                            <a href="#" className="text-sm text-gray-500 hover:text-gray-400">Privacy Policy</a>
-                            <a href="#" className="text-sm text-gray-500 hover:text-gray-400">Terms of Service</a>
-                            <a href="#" className="text-sm text-gray-500 hover:text-gray-400">Sitemap</a>
-                        </div>
                     </div>
                 </div>
             </div>
