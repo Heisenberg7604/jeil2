@@ -10,8 +10,9 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
     const productData = {
         'fibc': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
+                'dist/assets/products/FIBC.jpg',
+                'dist/assets/products/FIBC2.jpg',
+                'dist/assets/products/FIBC3.JPG',
             ],
             fullDescription: "JEIL is capable of producing PP woven Fabric from 50 gsm to 200 gsm that can be used for a variety of applications, such as small bag, making tarapaulins, grain covers, car covers and many others.",
             features: [
@@ -21,13 +22,15 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                 
             ],
             specifications: {
-               
+            "Base" :	"90 x 90 cms, 95 x 95 cms, 100 x 100 cms, 105 x105 cms",
+            "Height" :	"90 cms, 120 cms, 140 cms, 160 cms, 180 cms"
             }
         },
         'pp-woven': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
+                'dist/assets/products/woven-sack.jpg',
+                'dist/assets/products/fabric-roll3.jpg',
+                'dist/assets/products/woven3.jpg'
             ],
             fullDescription: "JEIL is capable of producing PP woven Fabric from 50 gsm to 200 gsm that can be used for a variety of applications, such as small bag, making tarapaulins, grain covers, car covers and many others.",
             features: [
@@ -50,8 +53,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'stretch-wrap': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
+                'dist/assets/products/stretch-wrapping-film.png',
+                'dist/assets/products/stretch-wrapping-film2.jpg'
             ],
             fullDescription: "High performance stretch wrap (pallet wrap) film for wrapping boxes or items that have been accumulated on a pallet. Our lines of stretch films are made for performance and value.",
             features: [
@@ -121,36 +124,12 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                 "Forms": "VCI Rolls, VCI bags, VCI sheet"
             }
         },
-        'breathable': {
-            images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
-            ],
-            fullDescription: "A film which is at least slightly permeable to gases due to the presence of open cells throughout its mass or to perforations. Can be laminated with non-woven web to produce soft, textile like composite.",
-            features: [
-                "Permeable to gases",
-                "Open cell structure",
-                "Can be laminated with non-woven web",
-                "Creates soft, textile-like composite"
-            ],
-            applications: [
-                "Laminated composites",
-                "Textile-like materials",
-                "Breathable packaging",
-                "Industrial applications"
-            ],
-            specifications: {
-                "Permeability": "Gas permeable",
-                "Structure": "Open cells or perforations",
-                "Lamination": "Compatible with non-woven web"
-            }
-        },
         'pvc-cling': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
+                'dist/assets/products/cling-film.jpg',
+                'dist/assets/products/cling2.jpg',
             ],
-            fullDescription: "PVC/PE cling film has become a major contributor to food safety, protecting meat and dairy products from micro-organisms that breed quickly when food is left uncovered.",
+            fullDescription: "PVC/PE cling films are designed for both food and industrial applications. For food, they play a vital role in protecting meat and dairy products from microorganisms, making them a preferred choice for supermarkets, catering establishments, and household storage. For industrial use, PVC cling films offer reliable protection for electrical components, cables, and wire ropes, while also safeguarding glass and high-gloss metal surfaces without leaving any residue.",
             features: [
                 "Major contributor to food safety",
                 "Protects from micro-organisms",
@@ -164,7 +143,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                 "Dairy product protection"
             ],
             specifications: {
-                "Width": "100 mm to 1000 mm",
+                "Width": "40 - 1000 mm (For Industrial Use), 100 - 1000 mm (For Food Use)",
                 "Thickness": "10 microns to 80 microns",
                 "Material": "PVC/PE"
             }
@@ -195,8 +174,10 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'garbage-bags': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
+                'dist/assets/products/garbage-bags.jpg',
+                'dist/assets/products/garbage-bag2.jpg',
+                'dist/assets/products/garbage-bag3.png',
+                'dist/assets/products/garbage-bag4.png'
             ],
             fullDescription: "Disposable bags used to contain rubbish, trash or garbage. Made out of plastic and typically in black colour. Convenient and sanitary way of handling garbage.",
             features: [
@@ -295,36 +276,11 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                 "Cost": "Cheaper than wooden pallets"
             }
         },
-        'hips-sheet': {
-            images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
-            ],
-            fullDescription: "High impact polystyrene with high dielectric strength, widely used for thermoforming applications in furniture, electrical housing, and various industrial parts.",
-            features: [
-                "High impact polystyrene",
-                "High dielectric strength",
-                "Thermoforming capability",
-                "Versatile applications"
-            ],
-            applications: [
-                "Seat back and base for molded furniture",
-                "Electrical housing thermoforming",
-                "Refrigeration industry sheets",
-                "Publicity and display boards",
-                "Disposables and vacuum formed trays"
-            ],
-            specifications: {
-                "Thickness": "0.35 mm to 3 mm",
-                "Width": "Up to 1500 mm",
-                "Material": "High Impact Polystyrene",
-                "Dielectric strength": "High"
-            }
-        },
         'pp-box-strapping': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
+                'dist/assets/products/box-strapping1.jpg',
+                'dist/assets/products/box-strapping2.jpg',
+                'dist/assets/products/pet-strapping-tape.jpg'
             ],
             fullDescription: "Strapping rolls made from PP materials with high shining and strength, widely used in various industries and home applications for efficient binding.",
             features: [
@@ -350,8 +306,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'air-bubble': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
+                'dist/assets/products/bubble-film.jpg',
+                'dist/assets/products/bubble-wrap3.png'
             ],
             fullDescription: "Transparent plastic material commonly used for packing fragile items. Provides cushioning through bubbles of different sizes for various protection levels.",
             features: [
@@ -375,7 +331,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'ldpe-shrink': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/products/ldpe-shrink-film.jpg',
                 'dist/assets/facility/bales.png',
             ],
             fullDescription: "High performance bulk packaging film providing excellent protection and stability during storage and transit. Cost effective alternative to carton or paper packaging.",
@@ -398,6 +354,58 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                 "Packaging": "Bulk packaging film"
             }
         },
+        'silage-film': {
+            images: [
+                'dist/assets/products/PP_roofingsheet.jpg',
+                'dist/assets/facility/bales.png',
+            ],
+            fullDescription: "High performance bulk packaging film providing excellent protection and stability during storage and transit. Cost effective alternative to carton or paper packaging.",
+            features: [
+                
+            ],
+            applications: [
+               
+            ],
+            specifications: {
+                
+            }
+        },
+        'upvc-roofing': {
+            images: [],
+            fullDescription: "Durable and weather-resistant roofing solution.",
+            features: [],
+            applications: [],
+            specifications: {
+                
+            }
+        },
+         'grow-bag': {
+            images: [],
+            fullDescription: "Durable and weather-resistant roofing solution.",
+            features: [],
+            applications: [],
+            specifications: {
+                
+            }
+        },
+        'mulching-film': {
+            images: [],
+            fullDescription: "Specialized film for agricultural mulching applications.",
+            features: [],
+            applications: [],
+            specifications: {
+
+            }
+        },
+        'upvc-foam-sheet': {
+            images: [],
+            fullDescription: "Lightweight and durable foam sheet for various applications.",
+            features: [],
+            applications: [],
+            specifications: {
+
+            }
+        }
     };
 
     const currentProduct = productData[product?.id] || {};

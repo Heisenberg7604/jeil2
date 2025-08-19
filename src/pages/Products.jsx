@@ -12,25 +12,56 @@ const Products = ({ isDark }) => {
             id: 'fibc',
             name: 'FIBC (Jumbo Bags)',
             description: 'Heavy-duty flexible intermediate bulk containers for industrial packaging',
-            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
+            image: 'dist/assets/products/Bulk Bags.jpg'
         },
         {
             id: 'pp-woven',
             name: 'PP Woven Sack / Fabric',
             description: 'Durable polypropylene woven sacks for various packaging needs',
-            image: 'https://images.unsplash.com/photo-1535813547-3e2f90a94d3c?auto=format&fit=crop&w=800'
+            image: 'dist/assets/products/woven-sack.jpg'
+        },
+        {
+            id: 'pvc-cling',
+            name: 'PVC Cling & Industrial Clining Film',
+            description: 'Transparent cling film for food packaging and general wrapping',
+            image: 'dist/assets/products/shrink-film2.jpg'
+        },
+        {
+            id: 'garbage-bags',
+            name: 'Garbage Bags',
+            description: 'Strong and reliable waste management solutions for various applications',
+            image: 'dist/assets/products/garbage-bag3.png'
+        },
+        {
+            id: 'pp-roofing',
+            name: 'PP Roofing Sheet',
+            description: 'Weather-resistant polypropylene sheets for roofing applications',
+            image: 'dist/assets/products/PP_roofingsheet.jpg'
+        },
+         {
+            id: 'pp-box-strapping',
+            name: 'PP Box Strapping',
+            description: 'Strong polypropylene strapping for secure box and package binding',
+            image: 'dist/assets/products/box-strapping2.jpg',
+
+        },
+        {
+            id: 'air-bubble',
+            name: 'Air Bubble Film',
+            description: 'Protective cushioning film for fragile items during shipping',
+            image: 'dist/assets/products/bubble-wrap2.png'
         },
         {
             id: 'stretch-wrap',
             name: 'Stretch Wrapping Film',
             description: 'High-quality stretch film for secure packaging and pallet wrapping',
-            image: 'https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=800'
+            image: 'dist/assets/products/stretch-film2.jpeg'
         },
         {
             id: 'polymer-masking',
             name: 'Polymer Bonded Masking Film',
             description: 'Advanced protection film for sensitive surfaces during processing',
-            image: 'https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&w=800'
+            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
         },
         {
             id: 'vci-stretch',
@@ -39,46 +70,10 @@ const Products = ({ isDark }) => {
             image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
         },
         {
-            id: 'breathable',
-            name: 'Breathable Films',
-            description: 'Allows air flow while maintaining moisture and contamination protection',
-            image: 'https://images.unsplash.com/photo-1535813547-3e2f90a94d3c?auto=format&fit=crop&w=800'
-        },
-        {
-            id: 'pvc-cling',
-            name: 'PVC Cling Film',
-            description: 'Transparent cling film for food packaging and general wrapping',
-            image: 'https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=800'
-        },
-        {
-            id: 'pvc-industrial',
-            name: 'PVC Industrial Cling Film',
-            description: 'Heavy-duty PVC film for industrial applications and equipment protection',
-            image: 'https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&w=800'
-        },
-        {
             id: 'anti-fog',
             name: 'Anti-fog Films',
             description: 'Specialized films that prevent condensation and maintain clarity',
             image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
-        },
-        {
-            id: 'garbage-bags',
-            name: 'Garbage Bags',
-            description: 'Strong and reliable waste management solutions for various applications',
-            image: 'https://images.unsplash.com/photo-1535813547-3e2f90a94d3c?auto=format&fit=crop&w=800'
-        },
-        {
-            id: 'pp-roofing',
-            name: 'PP Roofing Sheet',
-            description: 'Weather-resistant polypropylene sheets for roofing applications',
-            image: 'dist/assets/products/PP_roofingsheet.jpg'
-        },
-        {
-            id: 'pp-corrugated',
-            name: 'PP Corrugated Roofing Sheet',
-            description: 'Lightweight corrugated polypropylene sheets for enhanced structural strength',
-            image: 'https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&w=800'
         },
         {
             id: 'pp-door',
@@ -88,33 +83,45 @@ const Products = ({ isDark }) => {
         },
         {
             id: 'slip-sheet',
-            name: 'Slip Sheet',
+            name: 'Plastic Slip Sheet',
             description: 'Cost-effective alternative to pallets for material handling',
             image: 'https://images.unsplash.com/photo-1535813547-3e2f90a94d3c?auto=format&fit=crop&w=800'
-        },
-        {
-            id: 'hips-sheet',
-            name: 'HIPS Sheet',
-            description: 'High Impact Polystyrene sheets for various manufacturing applications',
-            image: 'https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=800'
-        },
-        {
-            id: 'pp-box-strapping',
-            name: 'PP Box Strapping',
-            description: 'Strong polypropylene strapping for secure box and package binding',
-            image: 'https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&w=800'
-        },
-        {
-            id: 'air-bubble',
-            name: 'Air Bubble Film',
-            description: 'Protective cushioning film for fragile items during shipping',
-            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
         },
         {
             id: 'ldpe-shrink',
             name: 'LDPE Shrink Film',
             description: 'Low-density polyethylene film that shrinks when heated for tight packaging',
             image: 'https://images.unsplash.com/photo-1535813547-3e2f90a94d3c?auto=format&fit=crop&w=800'
+        },
+        {
+            id: 'silage-film',
+            name: 'Silage Film',
+            description: 'Specialized film for agricultural silage applications',
+            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
+        },
+        {
+            id: 'upvc-roofing',
+            name: 'UPVC Roofing Sheet',
+            description: 'Durable and weather-resistant roofing solution',
+            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
+        },
+        {
+            id: 'grow-bag',
+            name: 'Grow Bag',
+            description: 'Durable and breathable bags for plant growth',
+            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
+        },
+        {
+            id: 'mulching-film',
+            name: 'Mulching Film',
+            description: 'Specialized film for agricultural mulching applications',
+            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
+        },
+        {
+            id: 'upvc-foam-sheet',
+            name: 'UPVC Foam Sheet',
+            description: 'Lightweight and durable foam sheet for various applications',
+            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
         }
     ];
 
