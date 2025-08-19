@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Package, ChevronLeft, ChevronRight, X, Shield, Truck, Award, ArrowLeft } from 'lucide-react';
+import RequestCatalogueForm from './RequestCatalogueForm';
 
 const ProductDetailPage = ({ product, isDark, onClose }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+    const [showCatalogueForm, setShowCatalogueForm] = useState(false);
 
     // Sample product data structure with multiple images and specs
     const productData = {
@@ -16,21 +18,23 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
             ],
             fullDescription: "JEIL is capable of producing PP woven Fabric from 50 gsm to 200 gsm that can be used for a variety of applications, such as small bag, making tarapaulins, grain covers, car covers and many others.",
             features: [
-               
+
             ],
             applications: [
-                
+
             ],
             specifications: {
-            "Base" :	"90 x 90 cms, 95 x 95 cms, 100 x 100 cms, 105 x105 cms",
-            "Height" :	"90 cms, 120 cms, 140 cms, 160 cms, 180 cms"
+                "Base": "90 x 90 cms, 95 x 95 cms, 100 x 100 cms, 105 x105 cms",
+                "Height": "90 cms, 120 cms, 140 cms, 160 cms, 180 cms"
             }
         },
         'pp-woven': {
             images: [
                 'dist/assets/products/woven-sack.jpg',
                 'dist/assets/products/fabric-roll3.jpg',
-                'dist/assets/products/woven3.jpg'
+                'dist/assets/products/woven3.jpg',
+                'dist/assets/products/HDPE_PP WOVEN FABRIC AND BAGS _B.jpg',
+                'dist/assets/products/HDPE_PP WOVEN FABRIC AND BAGS _C.jpg'
             ],
             fullDescription: "JEIL is capable of producing PP woven Fabric from 50 gsm to 200 gsm that can be used for a variety of applications, such as small bag, making tarapaulins, grain covers, car covers and many others.",
             features: [
@@ -41,7 +45,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
             ],
             applications: [
                 "Small bags",
-                "Tarapaulins", 
+                "Tarapaulins",
                 "Grain covers",
                 "Car covers"
             ],
@@ -54,7 +58,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         'stretch-wrap': {
             images: [
                 'dist/assets/products/stretch-wrapping-film.png',
-                'dist/assets/products/stretch-wrapping-film2.jpg'
+                'dist/assets/products/StretchWrap_ManualGrade.jpg',
+                'dist/assets/products/front Images.jpg'
             ],
             fullDescription: "High performance stretch wrap (pallet wrap) film for wrapping boxes or items that have been accumulated on a pallet. Our lines of stretch films are made for performance and value.",
             features: [
@@ -77,8 +82,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'polymer-masking': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
+                'dist/assets/products/POLYMER BONDED MASKING FILM _A.jpg',
+                'dist/assets/products/POLYMER BONDED MASKING FILM _B.jpg',
             ],
             fullDescription: "A multilayer plastic film with a special type of polymer having adhesive property on one side. Used for protection of a product's surface from dust, scratches and damage during manufacturing, handling and transportation.",
             features: [
@@ -89,7 +94,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
             ],
             applications: [
                 "Polycarbonate Sheets protection",
-                "Acrylic Sheet protection", 
+                "Acrylic Sheet protection",
                 "PVC, PP, HDPE Sheet protection",
                 "High Gloss Metal Sheet protection"
             ],
@@ -101,8 +106,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'vci-stretch': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
+                'dist/assets/products/VCI STRETCH FILM _A.jpg',
+                'dist/assets/products/VCI STRETCH FILM _B.jpg'
             ],
             fullDescription: "All-in-one anti-corrosive poly-film designed to be most effective in case of multi-metal products. Special multi-layer technology that exceeds in performance compared to other available VCI films.",
             features: [
@@ -150,8 +155,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'anti-fog': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
+                'dist/assets/products/cling2.jpg',
             ],
             fullDescription: "Films with proprietary agent that keeps products free from condensation of grease. Modified films that have high affinity for water, forming a continuous thin layer over the surface.",
             features: [
@@ -175,7 +179,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         'garbage-bags': {
             images: [
                 'dist/assets/products/garbage-bags.jpg',
-                'dist/assets/products/garbage-bag2.jpg',
+                'dist/assets/products/GARBAGE BAG.jpg',
                 'dist/assets/products/garbage-bag3.png',
                 'dist/assets/products/garbage-bag4.png'
             ],
@@ -213,7 +217,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
             ],
             applications: [
                 "Gate sheet",
-                "Elevation", 
+                "Elevation",
                 "Car Parking Shed",
                 "Roofing applications"
             ],
@@ -227,8 +231,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'pp-door': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
+                'dist/assets/products/ANGLE BOARDS & EDGE PROTECTORS_B.jpg',
+                'dist/assets/products/ANGLE BOARDS & EDGE PROTECTORS_.jpg'
             ],
             fullDescription: "Both side textured rigid PP sheets designed for various interior applications including partitions, false ceiling, bathroom doors, and wall cladding.",
             features: [
@@ -239,7 +243,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
             ],
             applications: [
                 "Partition walls",
-                "False ceiling", 
+                "False ceiling",
                 "Bathroom doors",
                 "Wall cladding"
             ],
@@ -280,7 +284,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
             images: [
                 'dist/assets/products/box-strapping1.jpg',
                 'dist/assets/products/box-strapping2.jpg',
-                'dist/assets/products/pet-strapping-tape.jpg'
+                'dist/assets/products/pet-strapping-tape.jpg',
+                'dist/assets/products/box-strapping3.jpg'
             ],
             fullDescription: "Strapping rolls made from PP materials with high shining and strength, widely used in various industries and home applications for efficient binding.",
             features: [
@@ -356,40 +361,48 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'silage-film': {
             images: [
-                'dist/assets/products/PP_roofingsheet.jpg',
-                'dist/assets/facility/bales.png',
+                'dist/assets/products/SILAGE FILM.jpg'
             ],
             fullDescription: "High performance bulk packaging film providing excellent protection and stability during storage and transit. Cost effective alternative to carton or paper packaging.",
             features: [
-                
+
             ],
             applications: [
-               
+
             ],
             specifications: {
-                
+
             }
         },
         'upvc-roofing': {
-            images: [],
+            images: [
+                'dist/assets/products/uPVC ROOFING SHEETS_A.jpg',
+                'dist/assets/products/uPVC ROOFING SHEETS_D.jpg'
+            ],
             fullDescription: "Durable and weather-resistant roofing solution.",
             features: [],
             applications: [],
             specifications: {
-                
+
             }
         },
-         'grow-bag': {
-            images: [],
+        'grow-bag': {
+            images: [
+                'dist/assets/products/grow-bag.jpg',
+                'dist/assets/products/grow-bag2.jpg'
+            ],
             fullDescription: "Durable and weather-resistant roofing solution.",
             features: [],
             applications: [],
             specifications: {
-                
+
             }
         },
         'mulching-film': {
-            images: [],
+            images: [
+                'dist/assets/products/mulching-film.jpg',
+                'dist/assets/products/mulching-film2.jpg'
+            ],
             fullDescription: "Specialized film for agricultural mulching applications.",
             features: [],
             applications: [],
@@ -440,19 +453,17 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                 <div className="flex items-center justify-between mb-8">
                     <button
                         onClick={onClose}
-                        className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
-                            isDark ? 'text-gray-300 hover:text-white hover:bg-gray-800' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'
-                        }`}
+                        className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${isDark ? 'text-gray-300 hover:text-white hover:bg-gray-800' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'
+                            }`}
                     >
                         <ArrowLeft className="w-5 h-5" />
                         <span>Back to Products</span>
                     </button>
-                    
+
                     <button
                         onClick={onClose}
-                        className={`p-2 rounded-full transition-colors ${
-                            isDark ? 'text-gray-400 hover:text-white hover:bg-gray-800' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'
-                        }`}
+                        className={`p-2 rounded-full transition-colors ${isDark ? 'text-gray-400 hover:text-white hover:bg-gray-800' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'
+                            }`}
                     >
                         <X className="w-6 h-6" />
                     </button>
@@ -469,7 +480,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                                     className="w-full h-full object-cover cursor-pointer"
                                     onClick={() => openImageModal(currentImageIndex)}
                                 />
-                                
+
                                 {images.length > 1 && (
                                     <>
                                         <button
@@ -487,18 +498,17 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                                     </>
                                 )}
                             </div>
-                            
+
                             {images.length > 1 && (
                                 <div className="flex justify-center space-x-2 mt-4">
                                     {images.map((_, index) => (
                                         <button
                                             key={index}
                                             onClick={() => setCurrentImageIndex(index)}
-                                            className={`w-3 h-3 rounded-full transition-colors ${
-                                                index === currentImageIndex
-                                                    ? 'bg-red-500'
-                                                    : isDark ? 'bg-gray-600' : 'bg-gray-300'
-                                            }`}
+                                            className={`w-3 h-3 rounded-full transition-colors ${index === currentImageIndex
+                                                ? 'bg-red-500'
+                                                : isDark ? 'bg-gray-600' : 'bg-gray-300'
+                                                }`}
                                         />
                                     ))}
                                 </div>
@@ -512,11 +522,10 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                                     <button
                                         key={index}
                                         onClick={() => setCurrentImageIndex(index)}
-                                        className={`relative h-20 rounded-lg overflow-hidden border-2 transition-colors ${
-                                            index === currentImageIndex
-                                                ? 'border-red-500'
-                                                : isDark ? 'border-gray-600' : 'border-gray-200'
-                                        }`}
+                                        className={`relative h-20 rounded-lg overflow-hidden border-2 transition-colors ${index === currentImageIndex
+                                            ? 'border-red-500'
+                                            : isDark ? 'border-gray-600' : 'border-gray-200'
+                                            }`}
                                     >
                                         <img
                                             src={img}
@@ -584,19 +593,18 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                         <div className="flex space-x-4">
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
-                                className={`flex-1 py-3 px-6 rounded-lg font-semibold text-white ${
-                                    isDark ? 'bg-red-500 hover:bg-red-600' : 'bg-red-600 hover:bg-red-700'
-                                } transition-colors`}
+                                onClick={() => setShowCatalogueForm(true)}
+                                className={`flex-1 py-3 px-6 rounded-lg font-semibold text-white ${isDark ? 'bg-red-500 hover:bg-red-600' : 'bg-red-600 hover:bg-red-700'
+                                    } transition-colors`}
                             >
-                                Request Quote
+                                Request Catalogue
                             </motion.button>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
-                                className={`px-6 py-3 rounded-lg border font-semibold transition-colors ${
-                                    isDark
-                                        ? 'border-gray-600 text-gray-300 hover:bg-gray-800'
-                                        : 'border-gray-300 text-gray-700 hover:bg-gray-50'
-                                }`}
+                                className={`px-6 py-3 rounded-lg border font-semibold transition-colors ${isDark
+                                    ? 'border-gray-600 text-gray-300 hover:bg-gray-800'
+                                    : 'border-gray-300 text-gray-700 hover:bg-gray-50'
+                                    }`}
                             >
                                 Contact Us
                             </motion.button>
@@ -613,7 +621,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                                 Technical Specifications
                             </h2>
                         </div>
-                        
+
                         <div className={`rounded-lg overflow-hidden ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
                             <div className="overflow-x-auto">
                                 <table className="w-full">
@@ -677,7 +685,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                             >
                                 <X className="w-6 h-6" />
                             </button>
-                            
+
                             {images.length > 1 && (
                                 <>
                                     <button
@@ -696,6 +704,16 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                             )}
                         </motion.div>
                     </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Request Catalogue Form */}
+            <AnimatePresence>
+                {showCatalogueForm && (
+                    <RequestCatalogueForm
+                        isDark={isDark}
+                        onClose={() => setShowCatalogueForm(false)}
+                    />
                 )}
             </AnimatePresence>
         </div>

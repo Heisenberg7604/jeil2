@@ -8,7 +8,6 @@ const Navigation = ({ isDark, onClose }) => {
         { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
         { name: 'Products', path: '/products' },
-        { name: 'Materials', path: '/materials' },
         { name: 'Gallery', path: '/gallery' },
         { name: 'Contact', path: '/contact' }
     ];

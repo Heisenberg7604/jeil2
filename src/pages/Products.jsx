@@ -61,31 +61,31 @@ const Products = ({ isDark }) => {
             id: 'polymer-masking',
             name: 'Polymer Bonded Masking Film',
             description: 'Advanced protection film for sensitive surfaces during processing',
-            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
+            image: 'dist/assets/products/POLYMER BONDED MASKING FILM _B.jpg'
         },
         {
             id: 'vci-stretch',
             name: 'VCI Stretch Film',
             description: 'Vapor corrosion inhibitor film for metal protection during storage',
-            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
+            image: 'dist/assets/products/VCI STRETCH FILM _B.jpg'
         },
         {
             id: 'anti-fog',
             name: 'Anti-fog Films',
             description: 'Specialized films that prevent condensation and maintain clarity',
-            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
+            image: 'dist/assets/products/ANTI FOG CLING FILM_B.jpg'
         },
         {
             id: 'pp-door',
             name: 'PP Door Panel',
             description: 'Durable polypropylene panels for door manufacturing and construction',
-            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
+            image: 'dist/assets/products/ANGLE BOARDS & EDGE PROTECTORS_B.jpg'
         },
         {
             id: 'slip-sheet',
             name: 'Plastic Slip Sheet',
             description: 'Cost-effective alternative to pallets for material handling',
-            image: 'https://images.unsplash.com/photo-1535813547-3e2f90a94d3c?auto=format&fit=crop&w=800'
+            image: 'dist/assets/products/SLIP SHEET_B.jpg'
         },
         {
             id: 'ldpe-shrink',
@@ -97,7 +97,7 @@ const Products = ({ isDark }) => {
             id: 'silage-film',
             name: 'Silage Film',
             description: 'Specialized film for agricultural silage applications',
-            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
+            image: 'dist/assets/products/SILAGE FILM.jpg'
         },
         {
             id: 'upvc-roofing',
@@ -109,7 +109,7 @@ const Products = ({ isDark }) => {
             id: 'grow-bag',
             name: 'Grow Bag',
             description: 'Durable and breathable bags for plant growth',
-            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
+            image: 'dist/assets/products/grow-bag.jpg'
         },
         {
             id: 'mulching-film',
