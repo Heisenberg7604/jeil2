@@ -20,7 +20,7 @@ const Footer = ({ isDark }) => {
                     <div>
                         <div className="flex items-center mb-4">
                             <img
-                                src="/public/assets/cropped-jeil-logo.jpg"
+                                src="/assets/cropped-jeil-logo.jpg"
                                 alt="JEIL Logo"
                                 className="w-28 h-28 object-contain"
                             />

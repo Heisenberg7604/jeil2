@@ -15,7 +15,7 @@ const Hero = () => {
                     playsInline
                     className="absolute inset-0 w-full h-full object-cover"
                 >
-                    <source src="/public/assets/hero.webm" type="video/webm" />
+                    <source src="/assets/hero.webm" type="video/webm" />
                 </video>
                 <div className="absolute inset-0 bg-black bg-opacity-50" />
             </div>

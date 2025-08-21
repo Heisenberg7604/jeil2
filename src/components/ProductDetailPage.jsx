@@ -10,9 +10,9 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
     const productData = {
         'fibc': {
             images: [
-                'public/assets/products/FIBC.jpg',
-                'public/assets/products/FIBC2.jpg',
-                'public/assets/products/FIBC3.JPG',
+                'assets/products/FIBC.jpg',
+                'assets/products/FIBC2.jpg',
+                'assets/products/FIBC3.JPG',
             ],
             fullDescription: "JEIL is capable of producing PP woven Fabric from 50 gsm to 200 gsm that can be used for a variety of applications, such as small bag, making tarapaulins, grain covers, car covers and many others.",
             features: [
@@ -28,11 +28,11 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'pp-woven': {
             images: [
-                'public/assets/products/woven-sack.jpg',
-                'public/assets/products/fabric-roll3.jpg',
-                'public/assets/products/woven3.jpg',
-                'public/assets/products/HDPE_PP WOVEN FABRIC AND BAGS _B.jpg',
-                'public/assets/products/HDPE_PP WOVEN FABRIC AND BAGS _C.jpg'
+                'assets/products/woven-sack.jpg',
+                'assets/products/fabric-roll3.jpg',
+                'assets/products/woven3.jpg',
+                'assets/products/HDPE_PP WOVEN FABRIC AND BAGS _B.jpg',
+                'assets/products/HDPE_PP WOVEN FABRIC AND BAGS _C.jpg'
             ],
             fullDescription: "JEIL is capable of producing PP woven Fabric from 50 gsm to 200 gsm that can be used for a variety of applications, such as small bag, making tarapaulins, grain covers, car covers and many others.",
             features: [
@@ -55,9 +55,9 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'stretch-wrap': {
             images: [
-                'public/assets/products/stretch-wrapping-film.png',
-                'public/assets/products/StretchWrap_ManualGrade.jpg',
-                'public/assets/products/front Images.jpg'
+                'assets/products/stretch-wrapping-film.png',
+                'assets/products/StretchWrap_ManualGrade.jpg',
+                'assets/products/front Images.jpg'
             ],
             fullDescription: "High performance stretch wrap (pallet wrap) film for wrapping boxes or items that have been accumulated on a pallet. Our lines of stretch films are made for performance and value.",
             features: [
@@ -80,8 +80,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'polymer-masking': {
             images: [
-                'public/assets/products/POLYMER BONDED MASKING FILM _A.jpg',
-                'public/assets/products/POLYMER BONDED MASKING FILM _B.jpg',
+                'assets/products/POLYMER BONDED MASKING FILM _A.jpg',
+                'assets/products/POLYMER BONDED MASKING FILM _B.jpg',
             ],
             fullDescription: "A multilayer plastic film with a special type of polymer having adhesive property on one side. Used for protection of a product's surface from dust, scratches and damage during manufacturing, handling and transportation.",
             features: [
@@ -104,8 +104,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'vci-stretch': {
             images: [
-                'public/assets/products/VCI STRETCH FILM _A.jpg',
-                'public/assets/products/VCI STRETCH FILM _B.jpg'
+                'assets/products/VCI STRETCH FILM _A.jpg',
+                'assets/products/VCI STRETCH FILM _B.jpg'
             ],
             fullDescription: "All-in-one anti-corrosive poly-film designed to be most effective in case of multi-metal products. Special multi-layer technology that exceeds in performance compared to other available VCI films.",
             features: [
@@ -129,8 +129,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'pvc-cling': {
             images: [
-                'public/assets/products/cling-film.jpg',
-                'public/assets/products/cling2.jpg',
+                'assets/products/cling-film.jpg',
+                'assets/products/cling2.jpg',
             ],
             fullDescription: "PVC/PE cling films are designed for both food and industrial applications. For food, they play a vital role in protecting meat and dairy products from microorganisms, making them a preferred choice for supermarkets, catering establishments, and household storage. For industrial use, PVC cling films offer reliable protection for electrical components, cables, and wire ropes, while also safeguarding glass and high-gloss metal surfaces without leaving any residue.",
             features: [
@@ -153,7 +153,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'anti-fog': {
             images: [
-                'public/assets/products/cling2.jpg',
+                'assets/products/cling2.jpg',
             ],
             fullDescription: "Films with proprietary agent that keeps products free from condensation of grease. Modified films that have high affinity for water, forming a continuous thin layer over the surface.",
             features: [
@@ -176,10 +176,10 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'garbage-bags': {
             images: [
-                'public/assets/products/garbage-bags.jpg',
-                'public/assets/products/GARBAGE BAG.jpg',
-                'public/assets/products/garbage-bag3.png',
-                'public/assets/products/garbage-bag4.png'
+                'assets/products/garbage-bags.jpg',
+                'assets/products/GARBAGE BAG.jpg',
+                'assets/products/garbage-bag3.png',
+                'assets/products/garbage-bag4.png'
             ],
             fullDescription: "Disposable bags used to contain rubbish, trash or garbage. Made out of plastic and typically in black colour. Convenient and sanitary way of handling garbage.",
             features: [
@@ -203,8 +203,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'pp-roofing': {
             images: [
-                'public/assets/products/PP_roofingsheet.jpg',
-                'public/assets/facility/bales.png',
+                'assets/products/PP_roofingsheet.jpg',
+                'assets/facility/bales.png',
             ],
             fullDescription: "Wide range of PP UV coated roofing sheets available in printed and textured designs. Offering multiple design options for various roofing applications.",
             features: [
@@ -229,8 +229,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'pp-door': {
             images: [
-                'public/assets/products/ANGLE BOARDS & EDGE PROTECTORS_B.jpg',
-                'public/assets/products/ANGLE BOARDS & EDGE PROTECTORS_.jpg'
+                'assets/products/ANGLE BOARDS & EDGE PROTECTORS_B.jpg',
+                'assets/products/ANGLE BOARDS & EDGE PROTECTORS_.jpg'
             ],
             fullDescription: "Both side textured rigid PP sheets designed for various interior applications including partitions, false ceiling, bathroom doors, and wall cladding.",
             features: [
@@ -254,8 +254,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'slip-sheet': {
             images: [
-                'public/assets/products/PP_roofingsheet.jpg',
-                'public/assets/facility/bales.png',
+                'assets/products/PP_roofingsheet.jpg',
+                'assets/facility/bales.png',
             ],
             fullDescription: "Used for pallet-less material handling. When placed under an object allows it to be mobilized. Special surface properties for optimal load handling.",
             features: [
@@ -280,10 +280,10 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'pp-box-strapping': {
             images: [
-                'public/assets/products/box-strapping1.jpg',
-                'public/assets/products/box-strapping2.jpg',
-                'public/assets/products/pet-strapping-tape.jpg',
-                'public/assets/products/box-strapping3.jpg'
+                'assets/products/box-strapping1.jpg',
+                'assets/products/box-strapping2.jpg',
+                'assets/products/pet-strapping-tape.jpg',
+                'assets/products/box-strapping3.jpg'
             ],
             fullDescription: "Strapping rolls made from PP materials with high shining and strength, widely used in various industries and home applications for efficient binding.",
             features: [
@@ -309,8 +309,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'air-bubble': {
             images: [
-                'public/assets/products/bubble-film.jpg',
-                'public/assets/products/bubble-wrap3.png'
+                'assets/products/bubble-film.jpg',
+                'assets/products/bubble-wrap3.png'
             ],
             fullDescription: "Transparent plastic material commonly used for packing fragile items. Provides cushioning through bubbles of different sizes for various protection levels.",
             features: [
@@ -334,8 +334,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'ldpe-shrink': {
             images: [
-                'public/assets/products/ldpe-shrink-film.jpg',
-                'public/assets/facility/bales.png',
+                'assets/products/ldpe-shrink-film.jpg',
+                'assets/facility/bales.png',
             ],
             fullDescription: "High performance bulk packaging film providing excellent protection and stability during storage and transit. Cost effective alternative to carton or paper packaging.",
             features: [
@@ -359,7 +359,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'silage-film': {
             images: [
-                'public/assets/products/SILAGE FILM.jpg'
+                'assets/products/SILAGE FILM.jpg'
             ],
             fullDescription: "High performance bulk packaging film providing excellent protection and stability during storage and transit. Cost effective alternative to carton or paper packaging.",
             features: [
@@ -374,8 +374,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'upvc-roofing': {
             images: [
-                'public/assets/products/uPVC ROOFING SHEETS_A.jpg',
-                'public/assets/products/uPVC ROOFING SHEETS_D.jpg'
+                'assets/products/uPVC ROOFING SHEETS_A.jpg',
+                'assets/products/uPVC ROOFING SHEETS_D.jpg'
             ],
             fullDescription: "Durable and weather-resistant roofing solution.",
             features: [],
@@ -386,8 +386,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'grow-bag': {
             images: [
-                'public/assets/products/grow-bag.jpg',
-                'public/assets/products/grow-bag2.jpg'
+                'assets/products/grow-bag.jpg',
+                'assets/products/grow-bag2.jpg'
             ],
             fullDescription: "Durable and weather-resistant roofing solution.",
             features: [],
@@ -398,8 +398,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'mulching-film': {
             images: [
-                'public/assets/products/mulching-film.jpg',
-                'public/assets/products/mulching-film2.jpg'
+                'assets/products/mulching-film.jpg',
+                'assets/products/mulching-film2.jpg'
             ],
             fullDescription: "Specialized film for agricultural mulching applications.",
             features: [],
