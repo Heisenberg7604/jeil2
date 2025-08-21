@@ -24,8 +24,8 @@ const Header = ({ isDark, toggleTheme }) => {
             {/* Animated background gradient */}
             <div className="fixed top-0 left-0 right-0 h-24 z-40 pointer-events-none">
                 <div className={`absolute inset-0 bg-gradient-to-br ${isDark
-                        ? 'from-slate-900/20 via-blue-900/10 to-purple-900/20'
-                        : 'from-blue-50/30 via-white/20 to-purple-50/30'
+                    ? 'from-slate-900/20 via-blue-900/10 to-purple-900/20'
+                    : 'from-blue-50/30 via-white/20 to-purple-50/30'
                     } animate-pulse`}
                     style={{
                         animationDuration: '8s',
@@ -69,7 +69,7 @@ const Header = ({ isDark, toggleTheme }) => {
                     <div className="absolute inset-0 overflow-hidden">
                         <div
                             className={`absolute inset-0 opacity-30 ${isDark ? 'bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-teal-500/10'
-                                    : 'bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-teal-400/20'
+                                : 'bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-teal-400/20'
                                 }`}
                             style={{
                                 background: `radial-gradient(circle at 50% 50%, 
@@ -128,7 +128,7 @@ const Header = ({ isDark, toggleTheme }) => {
                             <Link to="/" className="flex items-center cursor-pointer">
                                 <motion.div whileHover={{ scale: 1.02 }}>
                                     <img
-                                        src="dist/assets/cropped-jeil-logo.jpg"
+                                        src="public/assets/cropped-jeil-logo.jpg"
                                         alt="JEIL Logo"
                                         className="h-10 w-auto object-contain"
                                     />
@@ -150,8 +150,8 @@ const Header = ({ isDark, toggleTheme }) => {
                                             className="relative px-3 lg:px-4 py-2 rounded-xl group transition-all duration-300 text-sm lg:text-base"
                                         >
                                             <span className={`relative z-10 font-medium transition-colors duration-300 ${location.pathname === item.path
-                                                    ? 'text-red-400'
-                                                    : (isDark ? 'text-slate-300 group-hover:text-red-400' : 'text-slate-700 group-hover:text-red-600')
+                                                ? 'text-red-400'
+                                                : (isDark ? 'text-slate-300 group-hover:text-red-400' : 'text-slate-700 group-hover:text-red-600')
                                                 }`}>
                                                 {item.label}
                                             </span>

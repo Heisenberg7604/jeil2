@@ -12,80 +12,80 @@ const Products = ({ isDark }) => {
             id: 'fibc',
             name: 'FIBC (Jumbo Bags)',
             description: 'Heavy-duty flexible intermediate bulk containers for industrial packaging',
-            image: 'dist/assets/products/Bulk Bags.jpg'
+            image: 'public/assets/products/Bulk Bags.jpg'
         },
         {
             id: 'pp-woven',
             name: 'PP Woven Sack / Fabric',
             description: 'Durable polypropylene woven sacks for various packaging needs',
-            image: 'dist/assets/products/woven-sack.jpg'
+            image: 'public/assets/products/woven-sack.jpg'
         },
         {
             id: 'pvc-cling',
             name: 'PVC Cling & Industrial Clining Film',
             description: 'Transparent cling film for food packaging and general wrapping',
-            image: 'dist/assets/products/shrink-film2.jpg'
+            image: 'public/assets/products/shrink-film2.jpg'
         },
         {
             id: 'garbage-bags',
             name: 'Garbage Bags',
             description: 'Strong and reliable waste management solutions for various applications',
-            image: 'dist/assets/products/garbage-bag3.png'
+            image: 'public/assets/products/garbage-bag3.png'
         },
         {
             id: 'pp-roofing',
             name: 'PP Roofing Sheet',
             description: 'Weather-resistant polypropylene sheets for roofing applications',
-            image: 'dist/assets/products/PP_roofingsheet.jpg'
+            image: 'public/assets/products/PP_roofingsheet.jpg'
         },
-         {
+        {
             id: 'pp-box-strapping',
             name: 'PP Box Strapping',
             description: 'Strong polypropylene strapping for secure box and package binding',
-            image: 'dist/assets/products/box-strapping2.jpg',
+            image: 'public/assets/products/box-strapping2.jpg'
 
         },
         {
             id: 'air-bubble',
             name: 'Air Bubble Film',
             description: 'Protective cushioning film for fragile items during shipping',
-            image: 'dist/assets/products/bubble-wrap2.png'
+            image: 'public/assets/products/bubble-wrap2.png'
         },
         {
             id: 'stretch-wrap',
             name: 'Stretch Wrapping Film',
             description: 'High-quality stretch film for secure packaging and pallet wrapping',
-            image: 'dist/assets/products/stretch-film2.jpeg'
+            image: 'public/assets/products/stretch-film2.jpeg'
         },
         {
             id: 'polymer-masking',
             name: 'Polymer Bonded Masking Film',
             description: 'Advanced protection film for sensitive surfaces during processing',
-            image: 'dist/assets/products/POLYMER BONDED MASKING FILM _B.jpg'
+            image: 'public/assets/products/POLYMER BONDED MASKING FILM _B.jpg'
         },
         {
             id: 'vci-stretch',
             name: 'VCI Stretch Film',
             description: 'Vapor corrosion inhibitor film for metal protection during storage',
-            image: 'dist/assets/products/VCI STRETCH FILM _B.jpg'
+            image: 'public/assets/products/VCI STRETCH FILM _B.jpg'
         },
         {
             id: 'anti-fog',
             name: 'Anti-fog Films',
             description: 'Specialized films that prevent condensation and maintain clarity',
-            image: 'dist/assets/products/ANTI FOG CLING FILM_B.jpg'
+            image: 'public/assets/products/ANTI FOG CLING FILM_B.jpg'
         },
         {
             id: 'pp-door',
             name: 'PP Door Panel',
             description: 'Durable polypropylene panels for door manufacturing and construction',
-            image: 'dist/assets/products/ANGLE BOARDS & EDGE PROTECTORS_B.jpg'
+            image: 'public/assets/products/ANGLE BOARDS & EDGE PROTECTORS_B.jpg'
         },
         {
             id: 'slip-sheet',
             name: 'Plastic Slip Sheet',
             description: 'Cost-effective alternative to pallets for material handling',
-            image: 'dist/assets/products/SLIP SHEET_B.jpg'
+            image: 'public/assets/products/SLIP SHEET_B.jpg'
         },
         {
             id: 'ldpe-shrink',
@@ -97,7 +97,7 @@ const Products = ({ isDark }) => {
             id: 'silage-film',
             name: 'Silage Film',
             description: 'Specialized film for agricultural silage applications',
-            image: 'dist/assets/products/SILAGE FILM.jpg'
+            image: 'public/assets/products/SILAGE FILM.jpg'
         },
         {
             id: 'upvc-roofing',
@@ -109,7 +109,7 @@ const Products = ({ isDark }) => {
             id: 'grow-bag',
             name: 'Grow Bag',
             description: 'Durable and breathable bags for plant growth',
-            image: 'dist/assets/products/grow-bag.jpg'
+            image: 'public/assets/products/grow-bag.jpg'
         },
         {
             id: 'mulching-film',

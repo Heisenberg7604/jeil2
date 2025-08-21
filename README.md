@@ -148,7 +148,7 @@ PORT=5000
 ### Adding New Products
 1. Update `products` array in `src/pages/Products.jsx`
 2. Add product data in `src/components/ProductDetailPage.jsx`
-3. Add product images to `dist/assets/products/`
+3. Add product images to `public/assets/products/`
 
 ### Customizing Email Templates
 Edit email templates in `backend/server.js`:
@@ -164,7 +164,7 @@ Edit email templates in `backend/server.js`:
 
 ### Frontend
 1. Build the project: `npm run build`
-2. Deploy `dist/` folder to your hosting service
+2. Deploy `public/` folder to your hosting service
 3. Configure routing for SPA (all routes serve `index.html`)
 
 ### Backend
