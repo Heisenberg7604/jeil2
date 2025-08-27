@@ -9,7 +9,8 @@ const Navigation = ({ isDark, onClose }) => {
         { name: 'About', path: '/about' },
         { name: 'Products', path: '/products' },
         { name: 'Gallery', path: '/gallery' },
-        { name: 'Contact', path: '/contact' }
+        { name: 'Contact', path: '/contact' },
+        { name: 'Admin', path: '/admin/login' }
     ];
 
     return (
