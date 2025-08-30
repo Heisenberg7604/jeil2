@@ -26,7 +26,7 @@ const Footer = ({ isDark }) => {
                             />
                         </div>
                         <p className="mb-6 text-gray-400">
-                            JAGANNATH EXTRUSION INDIA LTD. and PATKAR EXTRUSIONS LTD. are pioneering forces in the packaging industry, delivering innovative solutions since 2010.
+                            JAGANNATH EXTRUSION INDIA LTD. and PATKAR EXTRUSIONS LTD. are pioneering forces in the packaging industry, delivering innovative solutions since 1999.
                         </p>
                         <div className="flex space-x-4">
                             <motion.a
@@ -140,10 +140,10 @@ const Footer = ({ isDark }) => {
                             <li className="flex items-center">
                                 <Mail className="w-5 h-5 mr-3 text-red-500 flex-shrink-0" />
                                 <a
-                                    href="mailto:info@pelwrap.com"
+                                    href="mailto:info@jeil.in"
                                     className="text-sm hover:text-red-400 transition-colors cursor-pointer"
                                 >
-                                    info@pelwrap.com
+                                    info@jeil.in
                                 </a>
                             </li>
                             <li className="flex items-center">

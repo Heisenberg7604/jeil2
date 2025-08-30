@@ -374,8 +374,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'upvc-roofing': {
             images: [
-                'assets/products/uPVC ROOFING SHEETS_A.jpg',
-                'assets/products/uPVC ROOFING SHEETS_D.jpg'
+                '/assets/products/upvcr-2.png',
+                '/assets/products/upvcr-3.png'
             ],
             fullDescription: "Durable and weather-resistant roofing solution.",
             features: [],
@@ -411,6 +411,18 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         'upvc-foam-sheet': {
             images: [],
             fullDescription: "Lightweight and durable foam sheet for various applications.",
+            features: [],
+            applications: [],
+            specifications: {
+
+            }
+        },
+        'edge-protector': {
+            images: [
+                'assets/products/ANGLE BOARDS & EDGE PROTECTORS_B.jpg',
+                'assets/products/ANGLE BOARDS & EDGE PROTECTORS_.jpg'
+            ],
+            fullDescription: "Protective packaging solution for edges and corners.",
             features: [],
             applications: [],
             specifications: {

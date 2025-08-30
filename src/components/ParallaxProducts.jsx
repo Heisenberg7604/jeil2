@@ -1,7 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const ParallaxProducts = ({ isDark }) => {
+    const navigate = useNavigate();
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -54,9 +56,10 @@ const ParallaxProducts = ({ isDark }) => {
                             whileInView={{ opacity: 1 }}
                             transition={{ delay: 0.6 }}
                             whileHover={{ scale: 1.05 }}
+                            onClick={() => navigate('/products')}
                             className="px-8 py-3 bg-white text-red-600 rounded-lg text-lg font-medium hover:bg-yellow-300 transition-colors"
                         >
-                            Explore Materials
+                            Explore Products
                         </motion.button>
                     </div>
 
@@ -68,7 +71,7 @@ const ParallaxProducts = ({ isDark }) => {
                             className="absolute top-[10%] left-[10%] w-[200px] h-[200px] z-20"
                         >
                             <img
-                                src="https://images.unsplash.com/photo-1635405074683-96d6921a2a68?auto=format&fit=crop&w=500"
+                                src="/assets/products/FIBC.JPG"
                                 alt="Stretch Film Roll"
                                 className="w-full h-full object-contain drop-shadow-2xl"
                             />
@@ -80,7 +83,7 @@ const ParallaxProducts = ({ isDark }) => {
                             className="absolute top-[30%] right-[15%] w-[180px] h-[180px] z-10"
                         >
                             <img
-                                src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&w=500"
+                                src="/assets/products/woven-sack.jpg"
                                 alt="HDPE Pellets"
                                 className="w-full h-full object-contain drop-shadow-2xl"
                             />
@@ -92,7 +95,7 @@ const ParallaxProducts = ({ isDark }) => {
                             className="absolute bottom-[20%] left-[20%] w-[150px] h-[150px] z-30"
                         >
                             <img
-                                src="https://images.unsplash.com/photo-1605600659873-d808a13e4d2a?auto=format&fit=crop&w=500"
+                                src="/assets/products/upvcr-1 copy.png"
                                 alt="PET Preforms"
                                 className="w-full h-full object-contain drop-shadow-2xl"
                             />
@@ -104,7 +107,7 @@ const ParallaxProducts = ({ isDark }) => {
                             className="absolute bottom-[10%] right-[25%] w-[220px] h-[220px] z-20"
                         >
                             <img
-                                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=500"
+                                src="/assets/products/grow-bag.jpg"
                                 alt="PP Film"
                                 className="w-full h-full object-contain drop-shadow-2xl"
                             />
