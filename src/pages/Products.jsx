@@ -9,22 +9,10 @@ const Products = ({ isDark }) => {
 
     const products = [
         {
-            id: 'fibc',
-            name: 'FIBC (Jumbo Bags)',
-            description: 'Heavy-duty flexible intermediate bulk containers for industrial packaging',
-            image: 'assets/products/Bulk Bags.jpg'
-        },
-        {
-            id: 'pp-woven',
-            name: 'PP Woven Sack / Fabric',
-            description: 'Durable polypropylene woven sacks for various packaging needs',
-            image: 'assets/products/woven-sack.jpg'
-        },
-        {
-            id: 'pvc-cling',
-            name: 'PVC Cling & Industrial Clining Film',
-            description: 'Transparent cling film for food packaging and general wrapping',
-            image: 'assets/products/shrink-film2.jpg'
+            id: 'stretch-wrap',
+            name: 'Stretch Wrapping Film',
+            description: 'High-quality stretch film for secure packaging and pallet wrapping',
+            image: 'assets/products/stretch-film2.jpeg'
         },
         {
             id: 'garbage-bags',
@@ -33,10 +21,70 @@ const Products = ({ isDark }) => {
             image: 'assets/products/garbage-bag3.png'
         },
         {
-            id: 'pp-roofing',
-            name: 'PP Roofing Sheet',
-            description: 'Weather-resistant polypropylene sheets for roofing applications',
-            image: 'assets/products/PP_roofingsheet.jpg'
+            id: 'anti-fog',
+            name: 'Anti-fog Films',
+            description: 'Specialized films that prevent condensation and maintain clarity',
+            image: 'assets/products/ANTI FOG CLING FILM_B.jpg'
+        },
+        {
+            id: 'pp-woven',
+            name: 'PP Woven Sack / Fabric',
+            description: 'Durable polypropylene woven sacks for various packaging needs',
+            image: 'assets/products/woven-sack.jpg'
+        },
+        {
+            id: 'upvc-roofing',
+            name: 'UPVC Roofing Sheet',
+            description: 'Durable and weather-resistant roofing solution',
+            image: '/assets/products/upvcr-1.png'
+        },
+        {
+            id: 'polymer-masking',
+            name: 'Polymer Bonded Masking Film',
+            description: 'Advanced protection film for sensitive surfaces during processing',
+            image: 'assets/products/POLYMER BONDED MASKING FILM _B.jpg'
+        },
+        {
+            id: 'air-bubble',
+            name: 'Air Bubble Film',
+            description: 'Protective cushioning film for fragile items during shipping',
+            image: 'assets/products/bubble-wrap2.png'
+        },
+        {
+            id: 'fibc',
+            name: 'FIBC (Jumbo Bags)',
+            description: 'Heavy-duty flexible intermediate bulk containers for industrial packaging',
+            image: 'assets/products/Bulk Bags.jpg'
+        },
+        {
+            id: 'grow-bag',
+            name: 'Grow Bag',
+            description: 'Durable and breathable bags for plant growth',
+            image: 'assets/products/grow-bag.jpg'
+        },
+        {
+            id: 'pp-door',
+            name: 'PP Door Panel',
+            description: 'Durable polypropylene panels for door manufacturing and construction',
+            image: ''
+        },
+        {
+            id: 'silage-film',
+            name: 'Silage Film',
+            description: 'Specialized film for agricultural silage applications',
+            image: 'assets/products/SILAGE FILM.jpg'
+        },
+        {
+            id: 'slip-sheet',
+            name: 'Plastic Slip Sheet',
+            description: 'Cost-effective alternative to pallets for material handling',
+            image: 'assets/products/SLIP SHEET_B.jpg'
+        },
+        {
+            id: 'vci-stretch',
+            name: 'VCI Stretch Film',
+            description: 'Vapor corrosion inhibitor film for metal protection during storage',
+            image: 'assets/products/VCI STRETCH FILM _B.jpg'
         },
         {
             id: 'pp-box-strapping',
@@ -46,46 +94,22 @@ const Products = ({ isDark }) => {
 
         },
         {
-            id: 'air-bubble',
-            name: 'Air Bubble Film',
-            description: 'Protective cushioning film for fragile items during shipping',
-            image: 'assets/products/bubble-wrap2.png'
+            id: 'mulching-film',
+            name: 'Mulching Film',
+            description: 'Specialized film for agricultural mulching applications',
+            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
         },
         {
-            id: 'stretch-wrap',
-            name: 'Stretch Wrapping Film',
-            description: 'High-quality stretch film for secure packaging and pallet wrapping',
-            image: 'assets/products/stretch-film2.jpeg'
+            id: 'pvc-cling',
+            name: 'PVC Cling & Industrial Clining Film',
+            description: 'Transparent cling film for food packaging and general wrapping',
+            image: 'assets/products/shrink-film2.jpg'
         },
         {
-            id: 'polymer-masking',
-            name: 'Polymer Bonded Masking Film',
-            description: 'Advanced protection film for sensitive surfaces during processing',
-            image: 'assets/products/POLYMER BONDED MASKING FILM _B.jpg'
-        },
-        {
-            id: 'vci-stretch',
-            name: 'VCI Stretch Film',
-            description: 'Vapor corrosion inhibitor film for metal protection during storage',
-            image: 'assets/products/VCI STRETCH FILM _B.jpg'
-        },
-        {
-            id: 'anti-fog',
-            name: 'Anti-fog Films',
-            description: 'Specialized films that prevent condensation and maintain clarity',
-            image: 'assets/products/ANTI FOG CLING FILM_B.jpg'
-        },
-        {
-            id: 'pp-door',
-            name: 'PP Door Panel',
-            description: 'Durable polypropylene panels for door manufacturing and construction',
-            image: 'assets/products/ANGLE BOARDS & EDGE PROTECTORS_B.jpg'
-        },
-        {
-            id: 'slip-sheet',
-            name: 'Plastic Slip Sheet',
-            description: 'Cost-effective alternative to pallets for material handling',
-            image: 'assets/products/SLIP SHEET_B.jpg'
+            id: 'upvc-foam-sheet',
+            name: 'UPVC Foam Sheet',
+            description: 'Lightweight and durable foam sheet for various applications',
+            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
         },
         {
             id: 'ldpe-shrink',
@@ -94,34 +118,16 @@ const Products = ({ isDark }) => {
             image: 'https://images.unsplash.com/photo-1535813547-3e2f90a94d3c?auto=format&fit=crop&w=800'
         },
         {
-            id: 'silage-film',
-            name: 'Silage Film',
-            description: 'Specialized film for agricultural silage applications',
-            image: 'assets/products/SILAGE FILM.jpg'
+            id: 'pp-roofing',
+            name: 'PP Roofing Sheet',
+            description: 'Weather-resistant polypropylene sheets for roofing applications',
+            image: 'assets/products/PP_roofingsheet.jpg'
         },
         {
-            id: 'upvc-roofing',
-            name: 'UPVC Roofing Sheet',
-            description: 'Durable and weather-resistant roofing solution',
-            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
-        },
-        {
-            id: 'grow-bag',
-            name: 'Grow Bag',
-            description: 'Durable and breathable bags for plant growth',
-            image: 'assets/products/grow-bag.jpg'
-        },
-        {
-            id: 'mulching-film',
-            name: 'Mulching Film',
-            description: 'Specialized film for agricultural mulching applications',
-            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
-        },
-        {
-            id: 'upvc-foam-sheet',
-            name: 'UPVC Foam Sheet',
-            description: 'Lightweight and durable foam sheet for various applications',
-            image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800'
+            id: 'edge-protector',
+            name: 'Edge Protector (Outer/Inner)',
+            description: 'Protective packaging solution for edges and corners',
+            image: 'assets/products/ANGLE BOARDS & EDGE PROTECTORS_B.jpg'
         }
     ];
 

@@ -123,12 +123,12 @@ const Home = ({ isDark }) => {
                             className="relative"
                         >
                             <img
-                                src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1200"
+                                src="/assets/facility/facility8.JPG"
                                 alt="Manufacturing Facility"
                                 className="rounded-lg shadow-2xl"
                             />
                             <div className={`absolute -bottom-6 -right-6 p-6 rounded-lg ${isDark ? 'bg-red-500' : 'bg-red-600'} text-white`}>
-                                <p className="text-3xl font-bold">10+</p>
+                                <p className="text-3xl font-bold">25+</p>
                                 <p className="text-sm">Years of Excellence</p>
                             </div>
                         </motion.div>
