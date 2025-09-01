@@ -18,15 +18,39 @@ const Contact = ({ isDark = false }) => {
         });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Here you would typically send the form data to your backend
-        console.log('Form submitted:', formData);
-        setIsSubmitted(true);
-        setFormData({ name: '', email: '', company: '', subject: '', message: '' });
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState('');
 
-        // Reset submission status after 3 seconds
-        setTimeout(() => setIsSubmitted(false), 3000);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('https://jeil.in/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setIsSubmitted(true);
+                setFormData({ name: '', email: '', company: '', subject: '', message: '' });
+                // Reset submission status after 3 seconds
+                setTimeout(() => setIsSubmitted(false), 3000);
+            } else {
+                setError(data.message || 'Failed to send message. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setError('Network error. Please check your connection and try again.');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     const contactInfo = [
@@ -145,6 +169,24 @@ const Contact = ({ isDark = false }) => {
                                     We'll get back to you as soon as possible.
                                 </p>
                             </div>
+                        ) : error ? (
+                            <div className="text-center py-8">
+                                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span className="text-red-600 text-2xl">!</span>
+                                </div>
+                                <h3 className={`text-xl font-semibold mb-2 ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                                    Error Sending Message
+                                </h3>
+                                <p className={`mb-4 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                                    {error}
+                                </p>
+                                <button
+                                    onClick={() => setError('')}
+                                    className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
+                                >
+                                    Try Again
+                                </button>
+                            </div>
                         ) : (
                             <div className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -240,10 +282,24 @@ const Contact = ({ isDark = false }) => {
 
                                 <button
                                     onClick={handleSubmit}
-                                    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-red-700 transition-colors flex items-center justify-center cursor-pointer"
+                                    disabled={isLoading}
+                                    className={`w-full py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center cursor-pointer ${
+                                        isLoading 
+                                            ? 'bg-gray-400 cursor-not-allowed' 
+                                            : 'bg-red-600 hover:bg-red-700 text-white'
+                                    }`}
                                 >
-                                    <Send className="w-5 h-5 mr-2" />
-                                    Send Message
+                                    {isLoading ? (
+                                        <>
+                                            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                                            Sending...
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Send className="w-5 h-5 mr-2" />
+                                            Send Message
+                                        </>
+                                    )}
                                 </button>
                             </div>
                         )}

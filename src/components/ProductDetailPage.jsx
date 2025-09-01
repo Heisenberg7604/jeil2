@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Package, ChevronLeft, ChevronRight, X, Shield, Truck, Award, ArrowLeft } from 'lucide-react';
+import { Package, ChevronLeft, ChevronRight, X, Shield, Truck, Award, ArrowLeft, Download } from 'lucide-react';
+import DownloadCatalogueModal from './DownloadCatalogueModal';
 
 const ProductDetailPage = ({ product, isDark, onClose }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+    const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
 
     // Sample product data structure with multiple images and specs
     const productData = {
@@ -587,8 +589,21 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                             </div>
                         )}
 
-                        {/* Contact Button */}
+                        {/* Download Catalogue and Contact Buttons */}
                         <div className="flex space-x-4">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                onClick={() => setIsDownloadModalOpen(true)}
+                                className={`px-6 py-3 rounded-lg font-semibold transition-colors flex items-center space-x-2 ${
+                                    isDark
+                                        ? 'bg-red-600 hover:bg-red-700 text-white'
+                                        : 'bg-red-600 hover:bg-red-700 text-white'
+                                }`}
+                            >
+                                <Download className="w-5 h-5" />
+                                <span>Download Catalogue</span>
+                            </motion.button>
+                            
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 className={`px-6 py-3 rounded-lg border font-semibold transition-colors ${isDark
@@ -697,7 +712,13 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                 )}
             </AnimatePresence>
 
-
+            {/* Download Catalogue Modal */}
+            <DownloadCatalogueModal
+                isOpen={isDownloadModalOpen}
+                onClose={() => setIsDownloadModalOpen(false)}
+                productName={product.name}
+                isDark={isDark}
+            />
         </div>
     );
 };
