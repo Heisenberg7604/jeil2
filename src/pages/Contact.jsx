@@ -136,60 +136,60 @@ const Contact = ({ isDark = false }) => {
     };
 
     return (
-        <div className={`min-h-screen pt-20 ${isDark ? 'bg-gray-900' : 'bg-gray-50'}`}>
-            <div className="container mx-auto px-4 py-16">
+        <div className={`min-h-screen pt-16 sm:pt-20 ${isDark ? 'bg-gray-900' : 'bg-gray-50'}`}>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
                 <div
-                    className={`text-4xl font-bold text-center mb-12 ${isDark ? 'text-white' : 'text-gray-800'}`}
+                    className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 ${isDark ? 'text-white' : 'text-gray-800'}`}
                 >
                     Contact Us
                 </div>
 
                 <div
-                    className={`text-lg text-center mb-16 max-w-3xl mx-auto ${isDark ? 'text-gray-300' : 'text-gray-600'}`}
+                    className={`text-base sm:text-lg text-center mb-12 sm:mb-16 max-w-3xl mx-auto px-4 sm:px-0 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}
                 >
                     Get in touch with our team of packaging experts. We're here to help you find the perfect solution for your needs.
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
                     {/* Contact Form */}
                     <div
-                        className={`p-8 rounded-xl shadow-xl ${isDark ? 'bg-gray-800' : 'bg-white'}`}
+                        className={`p-4 sm:p-6 lg:p-8 rounded-xl shadow-xl ${isDark ? 'bg-gray-800' : 'bg-white'}`}
                     >
-                        <h2 className={`text-2xl font-bold mb-6 ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                        <h2 className={`text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ${isDark ? 'text-white' : 'text-gray-800'}`}>
                             Send us a Message
                         </h2>
 
                         {isSubmitted ? (
-                            <div className="text-center py-8">
-                                <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                                <h3 className={`text-xl font-semibold mb-2 ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                            <div className="text-center py-6 sm:py-8">
+                                <CheckCircle className="w-12 h-12 sm:w-16 sm:h-16 text-green-500 mx-auto mb-3 sm:mb-4" />
+                                <h3 className={`text-lg sm:text-xl font-semibold mb-2 ${isDark ? 'text-white' : 'text-gray-800'}`}>
                                     Message Sent Successfully!
                                 </h3>
-                                <p className={isDark ? 'text-gray-300' : 'text-gray-600'}>
+                                <p className={`text-sm sm:text-base ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                                     We'll get back to you as soon as possible.
                                 </p>
                             </div>
                         ) : error ? (
-                            <div className="text-center py-8">
-                                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <span className="text-red-600 text-2xl">!</span>
+                            <div className="text-center py-6 sm:py-8">
+                                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                                    <span className="text-red-600 text-xl sm:text-2xl">!</span>
                                 </div>
-                                <h3 className={`text-xl font-semibold mb-2 ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                                <h3 className={`text-lg sm:text-xl font-semibold mb-2 ${isDark ? 'text-white' : 'text-gray-800'}`}>
                                     Error Sending Message
                                 </h3>
-                                <p className={`mb-4 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                                <p className={`mb-4 text-sm sm:text-base ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                                     {error}
                                 </p>
                                 <button
                                     onClick={() => setError('')}
-                                    className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
+                                    className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm sm:text-base"
                                 >
                                     Try Again
                                 </button>
                             </div>
                         ) : (
-                            <div className="space-y-6">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="space-y-4 sm:space-y-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                     <div>
                                         <label className={`block text-sm font-medium mb-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                                             Name *
@@ -200,7 +200,7 @@ const Contact = ({ isDark = false }) => {
                                             value={formData.name}
                                             onChange={handleChange}
                                             required
-                                            className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-red-500 ${isDark
+                                            className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base ${isDark
                                                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
                                                 }`}
@@ -218,7 +218,7 @@ const Contact = ({ isDark = false }) => {
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
-                                            className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-red-500 ${isDark
+                                            className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base ${isDark
                                                 ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                                 : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
                                                 }`}
@@ -236,7 +236,7 @@ const Contact = ({ isDark = false }) => {
                                         name="company"
                                         value={formData.company}
                                         onChange={handleChange}
-                                        className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-red-500 ${isDark
+                                        className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base ${isDark
                                             ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
                                             }`}
@@ -254,7 +254,7 @@ const Contact = ({ isDark = false }) => {
                                         value={formData.subject}
                                         onChange={handleChange}
                                         required
-                                        className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-red-500 ${isDark
+                                        className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base ${isDark
                                             ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
                                             }`}
@@ -271,8 +271,8 @@ const Contact = ({ isDark = false }) => {
                                         value={formData.message}
                                         onChange={handleChange}
                                         required
-                                        rows={5}
-                                        className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-red-500 resize-none ${isDark
+                                        rows={4}
+                                        className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-red-500 resize-none text-sm sm:text-base ${isDark
                                             ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                                             : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
                                             }`}
@@ -283,20 +283,19 @@ const Contact = ({ isDark = false }) => {
                                 <button
                                     onClick={handleSubmit}
                                     disabled={isLoading}
-                                    className={`w-full py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center cursor-pointer ${
-                                        isLoading 
-                                            ? 'bg-gray-400 cursor-not-allowed' 
+                                    className={`w-full py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center cursor-pointer text-sm sm:text-base ${isLoading
+                                            ? 'bg-gray-400 cursor-not-allowed'
                                             : 'bg-red-600 hover:bg-red-700 text-white'
-                                    }`}
+                                        }`}
                                 >
                                     {isLoading ? (
                                         <>
-                                            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                                            <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-white mr-2"></div>
                                             Sending...
                                         </>
                                     ) : (
                                         <>
-                                            <Send className="w-5 h-5 mr-2" />
+                                            <Send className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                                             Send Message
                                         </>
                                     )}
@@ -306,28 +305,28 @@ const Contact = ({ isDark = false }) => {
                     </div>
 
                     {/* Contact Information */}
-                    <div className="space-y-8">
+                    <div className="space-y-6 sm:space-y-8">
                         <div>
-                            <h2 className={`text-2xl font-bold mb-6 ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                            <h2 className={`text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ${isDark ? 'text-white' : 'text-gray-800'}`}>
                                 Get in Touch
                             </h2>
-                            <p className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                            <p className={`text-base sm:text-lg ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                                 Our team is ready to assist you with any questions about our packaging solutions.
                             </p>
                         </div>
 
-                        <div className="space-y-6">
+                        <div className="space-y-4 sm:space-y-6">
                             {contactInfo.map((info, index) => (
                                 <div
                                     key={info.title}
-                                    className={`flex items-start p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'
+                                    className={`flex items-start p-4 sm:p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-white'
                                         } shadow-lg hover:shadow-xl transition-shadow duration-200`}
                                 >
-                                    <div className={`p-3 rounded-full ${isDark ? 'bg-red-500/20' : 'bg-red-100'} mr-4 flex-shrink-0`}>
-                                        <info.icon className={`w-6 h-6 ${isDark ? 'text-red-400' : 'text-red-600'}`} />
+                                    <div className={`p-2 sm:p-3 rounded-full ${isDark ? 'bg-red-500/20' : 'bg-red-100'} mr-3 sm:mr-4 flex-shrink-0`}>
+                                        <info.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${isDark ? 'text-red-400' : 'text-red-600'}`} />
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className={`font-semibold mb-2 ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                                        <h3 className={`font-semibold mb-2 text-sm sm:text-base ${isDark ? 'text-white' : 'text-gray-800'}`}>
                                             {info.title}
                                         </h3>
                                         {renderContactDetails(info)}

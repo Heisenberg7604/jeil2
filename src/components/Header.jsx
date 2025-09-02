@@ -225,7 +225,6 @@ const Header = ({ isDark, toggleTheme }) => {
                                             <Sun size={16} className="sm:w-[18px] sm:h-[18px]" />
                                         ) : (
                                             <Moon size={16} className="sm:w-[18px] sm:h-[18px] rotate-180" />
-                                            // or try scale-y-[-1] instead of rotate-180
                                         )}
                                     </motion.div>
 

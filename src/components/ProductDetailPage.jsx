@@ -58,7 +58,6 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         'stretch-wrap': {
             images: [
                 'assets/products/stretch-wrapping-film.png',
-                'assets/products/StretchWrap_ManualGrade.jpg',
                 'assets/products/front Images.jpg'
             ],
             fullDescription: "High performance stretch wrap (pallet wrap) film for wrapping boxes or items that have been accumulated on a pallet. Our lines of stretch films are made for performance and value.",
@@ -460,16 +459,17 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
 
     return (
         <div className={`fixed inset-0 z-50 overflow-y-auto ${isDark ? 'bg-gray-900' : 'bg-gray-50'}`}>
-            <div className="container mx-auto px-4 py-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
                 {/* Header */}
-                <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center justify-between mb-6 sm:mb-8">
                     <button
                         onClick={onClose}
-                        className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${isDark ? 'text-gray-300 hover:text-white hover:bg-gray-800' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'
+                        className={`flex items-center space-x-2 px-3 sm:px-4 py-2 rounded-lg transition-colors text-sm sm:text-base ${isDark ? 'text-gray-300 hover:text-white hover:bg-gray-800' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'
                             }`}
                     >
-                        <ArrowLeft className="w-5 h-5" />
-                        <span>Back to Products</span>
+                        <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+                        <span className="hidden sm:inline">Back to Products</span>
+                        <span className="sm:hidden">Back</span>
                     </button>
 
                     <button
@@ -477,15 +477,15 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                         className={`p-2 rounded-full transition-colors ${isDark ? 'text-gray-400 hover:text-white hover:bg-gray-800' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'
                             }`}
                     >
-                        <X className="w-6 h-6" />
+                        <X className="w-5 h-5 sm:w-6 sm:h-6" />
                     </button>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
                     {/* Image Slideshow */}
                     <div className="space-y-4">
                         <div className="relative">
-                            <div className="relative h-96 rounded-lg overflow-hidden">
+                            <div className="relative h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden">
                                 <img
                                     src={images[currentImageIndex]}
                                     alt={product.name}
@@ -497,15 +497,15 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                                     <>
                                         <button
                                             onClick={prevImage}
-                                            className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                                            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 p-1.5 sm:p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
                                         >
-                                            <ChevronLeft className="w-5 h-5" />
+                                            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
                                         </button>
                                         <button
                                             onClick={nextImage}
-                                            className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                                            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 p-1.5 sm:p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
                                         >
-                                            <ChevronRight className="w-5 h-5" />
+                                            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
                                         </button>
                                     </>
                                 )}
@@ -529,12 +529,12 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
 
                         {/* Thumbnail Images */}
                         {images.length > 1 && (
-                            <div className="grid grid-cols-4 gap-2">
+                            <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
                                 {images.map((img, index) => (
                                     <button
                                         key={index}
                                         onClick={() => setCurrentImageIndex(index)}
-                                        className={`relative h-20 rounded-lg overflow-hidden border-2 transition-colors ${index === currentImageIndex
+                                        className={`relative h-16 sm:h-20 rounded-lg overflow-hidden border-2 transition-colors ${index === currentImageIndex
                                             ? 'border-red-500'
                                             : isDark ? 'border-gray-600' : 'border-gray-200'
                                             }`}
@@ -553,13 +553,13 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                     {/* Product Information */}
                     <div>
                         <div className="flex items-center mb-4">
-                            <Package className={`w-8 h-8 mr-3 ${isDark ? 'text-red-400' : 'text-red-600'}`} />
-                            <h1 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                            <Package className={`w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 ${isDark ? 'text-red-400' : 'text-red-600'}`} />
+                            <h1 className={`text-2xl sm:text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-800'}`}>
                                 {product.name}
                             </h1>
                         </div>
 
-                        <p className={`text-lg mb-6 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                        <p className={`text-base sm:text-lg mb-6 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                             {fullDescription || product.description}
                         </p>
 
@@ -602,23 +602,22 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                         )}
 
                         {/* Download Catalogue and Contact Buttons */}
-                        <div className="flex space-x-4">
+                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 onClick={() => setIsDownloadModalOpen(true)}
-                                className={`px-6 py-3 rounded-lg font-semibold transition-colors flex items-center space-x-2 ${
-                                    isDark
+                                className={`px-4 sm:px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 text-sm sm:text-base ${isDark
                                         ? 'bg-red-600 hover:bg-red-700 text-white'
                                         : 'bg-red-600 hover:bg-red-700 text-white'
-                                }`}
+                                    }`}
                             >
-                                <Download className="w-5 h-5" />
+                                <Download className="w-4 h-4 sm:w-5 sm:h-5" />
                                 <span>Download Catalogue</span>
                             </motion.button>
-                            
+
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
-                                className={`px-6 py-3 rounded-lg border font-semibold transition-colors ${isDark
+                                className={`px-4 sm:px-6 py-3 rounded-lg border font-semibold transition-colors text-sm sm:text-base ${isDark
                                     ? 'border-gray-600 text-gray-300 hover:bg-gray-800'
                                     : 'border-gray-300 text-gray-700 hover:bg-gray-50'
                                     }`}
@@ -631,10 +630,10 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
 
                 {/* Technical Specifications */}
                 {specifications && (
-                    <div className="mt-12">
-                        <div className="flex items-center mb-6">
-                            <Award className={`w-6 h-6 mr-3 ${isDark ? 'text-red-400' : 'text-red-600'}`} />
-                            <h2 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                    <div className="mt-8 sm:mt-12">
+                        <div className="flex items-center mb-4 sm:mb-6">
+                            <Award className={`w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 ${isDark ? 'text-red-400' : 'text-red-600'}`} />
+                            <h2 className={`text-xl sm:text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-800'}`}>
                                 Technical Specifications
                             </h2>
                         </div>
@@ -644,10 +643,10 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                                 <table className="w-full">
                                     <thead>
                                         <tr className={`${isDark ? 'bg-gray-700' : 'bg-gray-50'}`}>
-                                            <th className={`px-6 py-4 text-left font-semibold ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                                            <th className={`px-3 sm:px-6 py-3 sm:py-4 text-left font-semibold text-sm sm:text-base ${isDark ? 'text-white' : 'text-gray-800'}`}>
                                                 Specification
                                             </th>
-                                            <th className={`px-6 py-4 text-left font-semibold ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                                            <th className={`px-3 sm:px-6 py-3 sm:py-4 text-left font-semibold text-sm sm:text-base ${isDark ? 'text-white' : 'text-gray-800'}`}>
                                                 Value
                                             </th>
                                         </tr>
@@ -658,10 +657,10 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                                                 key={key}
                                                 className={`border-t ${isDark ? 'border-gray-700' : 'border-gray-200'}`}
                                             >
-                                                <td className={`px-6 py-4 font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                                                <td className={`px-3 sm:px-6 py-3 sm:py-4 font-medium text-sm sm:text-base ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                                                     {key}
                                                 </td>
-                                                <td className={`px-6 py-4 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                                                <td className={`px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                                                     {value}
                                                 </td>
                                             </tr>
