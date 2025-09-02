@@ -317,7 +317,7 @@ app.post('/api/download-catalogue', async (req, res) => {
           <p style="margin-bottom: 15px;">Please click the link below to download your requested catalogue:</p>
           
           <div style="text-align: center; margin: 25px 0;">
-            <a href="https://jeil.in/public/assets/Product%20Catalogue-PEPL-JEIL.pdf" 
+            <a href="https://jeil.in/assets/Product%20Catalogue-PEPL-JEIL.pdf" 
                style="background-color: #dc2626; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
               📥 Download Product Catalogue
             </a>
