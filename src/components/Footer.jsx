@@ -103,10 +103,10 @@ const Footer = ({ isDark }) => {
                                     </div>
                                     <div>
                                         <a
-                                            href="tel:+912646222163"
+                                            href="tel:+912261363900"
                                             className="hover:text-red-400 transition-colors cursor-pointer block"
                                         >
-                                            +91 2646 222163
+                                            +91 22 61363900
                                         </a>
                                     </div>
                                     <div>
