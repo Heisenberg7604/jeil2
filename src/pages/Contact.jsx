@@ -357,7 +357,17 @@ const Contact = ({ isDark = false }) => {
                         <OurNetworkcard
                             title="Sales Office"
                             subtitle="Mumbai, Maharashtra"
-                            address="Bandra Kurla Complex, Mumbai - 400051, Maharashtra, India"
+                            address="A-34, Virwani Industrial Estate, Goregaon (E), Mumbai - 400063, Maharashtra, India"
+                            phone1="+91 9876543210"
+                            phone2="+91 9876543211"
+                            emails={['sales@jeil.in', 'mumbai@jeil.in']}
+                            linkText="Contact Sales"
+                            linkUrl="#contact"
+                        />
+                        <OurNetworkcard
+                            title="Silvassa Works"
+                            subtitle="Survey No:40/1, Shed No-1 Dadra Village, Dadra Nagar Haveli, Silvassa"
+                            address="A-34, Virwani Industrial Estate, Goregaon (E), Mumbai - 400063, Maharashtra, India"
                             phone1="+91 9876543210"
                             phone2="+91 9876543211"
                             emails={['sales@jeil.in', 'mumbai@jeil.in']}
@@ -366,12 +376,22 @@ const Contact = ({ isDark = false }) => {
                         />
                         <OurNetworkcard
                             title="Distribution Center"
-                            subtitle="Delhi, NCR"
-                            address="Industrial Area, Phase 2, Gurgaon - 122001, Haryana, India"
-                            phone1="+91 9876543212"
-                            phone2="+91 9876543213"
-                            emails={['delivery@jeil.in', 'logistics@jeil.in']}
-                            linkText="Track Delivery"
+                            subtitle="Dehej, Gujarat"
+                            address="Plot N. D-2/E/21/14, Dahej-II Industrial Estate, Tal. Vagra, Dist. Bharuch - 392110, Gujarat, India"
+                            phone1=""
+                            phone2=""
+                            emails={['', '']}
+                            linkText=""
+                            linkUrl="#contact"
+                        />
+                        <OurNetworkcard
+                            title="Distribution Center"
+                            subtitle="Nardana, Maharashtra"
+                            address="Plot No. B-2, Nardana Industrial Area, Bhabale - 425504, TA. Shindkheda, Dist. Dhule, Maharashtra 425404."
+                            phone1=""
+                            phone2=""
+                            emails={['', '']}
+                            linkText=""
                             linkUrl="#contact"
                         />
                     </div>
