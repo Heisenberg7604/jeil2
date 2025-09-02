@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, ExternalLink } from 'lucide-react';
+import OurNetworkcard from '../components/OurNetworkcard';
 
 const Contact = ({ isDark = false }) => {
     const [formData, setFormData] = useState({
@@ -284,8 +285,8 @@ const Contact = ({ isDark = false }) => {
                                     onClick={handleSubmit}
                                     disabled={isLoading}
                                     className={`w-full py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center cursor-pointer text-sm sm:text-base ${isLoading
-                                            ? 'bg-gray-400 cursor-not-allowed'
-                                            : 'bg-red-600 hover:bg-red-700 text-white'
+                                        ? 'bg-gray-400 cursor-not-allowed'
+                                        : 'bg-red-600 hover:bg-red-700 text-white'
                                         }`}
                                 >
                                     {isLoading ? (
@@ -334,6 +335,45 @@ const Contact = ({ isDark = false }) => {
                                 </div>
                             ))}
                         </div>
+                    </div>
+                </div>
+
+                {/* Our Network Section */}
+                <div className="mt-16 sm:mt-20">
+                    <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                        Our Network
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                        <OurNetworkcard
+                            title="Head Office"
+                            subtitle="Ankleshwar, Gujarat"
+                            address="C1B – 1034 to 1037 GIDC Industrial Estate, Ankleshwar – 393 002, Gujarat – INDIA"
+                            phone1="+91 9324800007"
+                            phone2="+91 9924202318"
+                            emails={['patkar27@gmail.com', 'parsai@pelwrap.com']}
+                            linkText="Visit Location"
+                            linkUrl="https://maps.google.com/?q=C1B+1034+to+1037+GIDC+Industrial+Estate+Ankleshwar+393002+Gujarat+INDIA"
+                        />
+                        <OurNetworkcard
+                            title="Sales Office"
+                            subtitle="Mumbai, Maharashtra"
+                            address="Bandra Kurla Complex, Mumbai - 400051, Maharashtra, India"
+                            phone1="+91 9876543210"
+                            phone2="+91 9876543211"
+                            emails={['sales@jeil.in', 'mumbai@jeil.in']}
+                            linkText="Contact Sales"
+                            linkUrl="#contact"
+                        />
+                        <OurNetworkcard
+                            title="Distribution Center"
+                            subtitle="Delhi, NCR"
+                            address="Industrial Area, Phase 2, Gurgaon - 122001, Haryana, India"
+                            phone1="+91 9876543212"
+                            phone2="+91 9876543213"
+                            emails={['delivery@jeil.in', 'logistics@jeil.in']}
+                            linkText="Track Delivery"
+                            linkUrl="#contact"
+                        />
                     </div>
                 </div>
             </div>

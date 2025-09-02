@@ -614,16 +614,6 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                                 <Download className="w-4 h-4 sm:w-5 sm:h-5" />
                                 <span>Download Catalogue</span>
                             </motion.button>
-
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                className={`px-4 sm:px-6 py-3 rounded-lg border font-semibold transition-colors text-sm sm:text-base ${isDark
-                                    ? 'border-gray-600 text-gray-300 hover:bg-gray-800'
-                                    : 'border-gray-300 text-gray-700 hover:bg-gray-50'
-                                    }`}
-                            >
-                                Contact Us
-                            </motion.button>
                         </div>
                     </div>
                 </div>
