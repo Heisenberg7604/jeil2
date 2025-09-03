@@ -344,7 +344,7 @@ const Contact = ({ isDark = false }) => {
                         Our Network
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                        <OurNetworkcard
+                        {/* <OurNetworkcard
                             title="Head Office"
                             subtitle="Ankleshwar, Gujarat"
                             address="C1B – 1034 to 1037 GIDC Industrial Estate, Ankleshwar – 393 002, Gujarat – INDIA"
@@ -393,7 +393,7 @@ const Contact = ({ isDark = false }) => {
                             emails={['', '']}
                             linkText=""
                             linkUrl="#contact"
-                        />
+                        /> */}
                     </div>
                 </div>
             </div>
