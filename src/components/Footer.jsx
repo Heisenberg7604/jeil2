@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Globe, Facebook, Twitter, Linkedin, Instagram, ChevronRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, Facebook, Linkedin, Instagram, ChevronRight } from 'lucide-react';
 
 const Footer = ({ isDark }) => {
     const currentYear = new Date().getFullYear();
@@ -46,6 +46,15 @@ const Footer = ({ isDark }) => {
                                 className={`p-1.5 sm:p-2 rounded-full ${isDark ? 'bg-gray-700 hover:bg-red-500' : 'bg-gray-800 hover:bg-red-600'} transition-colors`}
                             >
                                 <Instagram size={16} className="sm:w-[18px] sm:h-[18px]" />
+                            </motion.a>
+                            <motion.a
+                                href="https://www.facebook.com/share/1E1mivn66t/?mibextid=wwXIfr"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.1 }}
+                                className={`p-1.5 sm:p-2 rounded-full ${isDark ? 'bg-gray-700 hover:bg-red-500' : 'bg-gray-800 hover:bg-red-600'} transition-colors`}
+                            >
+                                <Facebook size={16} className="sm:w-[18px] sm:h-[18px]" />
                             </motion.a>
                         </div>
                     </div>

@@ -375,8 +375,8 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
         },
         'upvc-roofing': {
             images: [
-                '/assets/products/upvcr-2.png',
-                '/assets/products/upvcr-3.png'
+                '/assets/products/03.png',
+                '/assets/products/04.png'
             ],
             fullDescription: "Durable and weather-resistant roofing solution.",
             features: [],
