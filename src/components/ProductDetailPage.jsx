@@ -371,24 +371,34 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
             applications: [
                 "Forage crops wrapping",
                 "Grass, hay, and corn storage",
-            ],
-            specifications: {
-
-            }
+            ]
         },
         'upvc-roofing': {
             images: [
                 '/assets/products/03.png',
                 '/assets/products/04.png'
             ],
-            fullDescription: "Durable and weather-resistant roofing solution.",
-            features: [],
-            applications: [],
+            fullDescription: "High-quality UPVC roofing sheets designed for durability and superior thermal, sound, and weather resistance. Manufactured using advanced technology from premium grade polymer and chemical formulation, these sheets provide excellent performance and protection for modern structures.",
+            features: [
+                "Superior thermal insulation",
+                "Excellent sound insulation",
+                "Weather-resistant resin blocks UV radiation",
+                "Reduces heat conductivity",
+                "High durability and chemical corrosion resistance",
+                "Optimum strength and rigidity from modified PVC"
+            ],
+            applications: [
+                "Industrial roofing",
+                "Residential roofing",
+                "Sound-insulated structures",
+                "Weatherproof sheds",
+                "Corrosion-resistant buildings"
+            ],
             specifications: {
                 Colours: "Red, Orange, Blue & Dark Grey",
-                Width: "1050mm",
+                Width: "1050mm, 1120mm",
                 Length: "8/10/12/14 Feet & Customized",
-                Thickness: "2/2.5/3mm"
+                Thickness: "1.5/2/2.5/3mm"
             }
         },
         'grow-bag': {
@@ -408,10 +418,7 @@ const ProductDetailPage = ({ product, isDark, onClose }) => {
                 "Urban farming",
                 "Container planting",
                 "Home gardening"
-            ],
-            specifications: {
-
-            }
+            ]
         },
         'mulching-film': {
             images: [
