@@ -71,8 +71,8 @@ const ParallaxProducts = ({ isDark }) => {
                             className="absolute top-[10%] left-[10%] w-[200px] h-[200px] z-20"
                         >
                             <img
-                                src="/assets/products/FIBC.JPG"
-                                alt="Stretch Film Roll"
+                                src="/assets/products/FIBC.jpg"
+                                alt="FIBC bags"
                                 className="w-full h-full object-contain drop-shadow-2xl"
                             />
                         </motion.div>
@@ -84,7 +84,7 @@ const ParallaxProducts = ({ isDark }) => {
                         >
                             <img
                                 src="/assets/products/woven-sack.jpg"
-                                alt="HDPE Pellets"
+                                alt="HDPE woven fabric"
                                 className="w-full h-full object-contain drop-shadow-2xl"
                             />
                         </motion.div>
@@ -96,7 +96,7 @@ const ParallaxProducts = ({ isDark }) => {
                         >
                             <img
                                 src="/assets/products/upvcr-1 copy.png"
-                                alt="PET Preforms"
+                                alt="UPVC Roofing Sheets"
                                 className="w-full h-full object-contain drop-shadow-2xl"
                             />
                         </motion.div>

@@ -39,7 +39,7 @@ const ParallaxRawMaterials = ({ isDark }) => {
                         >
                             <img
                                 src="/assets/facility/facility5.JPG"
-                                alt="HDPE Granules"
+                                alt="JEIL Facility"
                                 className="w-full h-full object-contain drop-shadow-2xl"
                             />
                         </motion.div>
@@ -51,7 +51,7 @@ const ParallaxRawMaterials = ({ isDark }) => {
                         >
                             <img
                                 src="/assets/facility/facility3.jpg"
-                                alt="PP Pellets"
+                                alt="JEIL Plant"
                                 className="w-full h-full object-contain drop-shadow-2xl"
                             />
                         </motion.div>
@@ -63,7 +63,7 @@ const ParallaxRawMaterials = ({ isDark }) => {
                         >
                             <img
                                 src="/assets/facility/facility4.jpg"
-                                alt="PET Resin"
+                                alt="JEIL Production"
                                 className="w-full h-full object-contain drop-shadow-2xl"
                             />
                         </motion.div>
