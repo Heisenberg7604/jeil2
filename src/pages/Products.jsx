@@ -21,22 +21,16 @@ const Products = ({ isDark }) => {
             image: 'assets/products/woven-sack.jpg'
         },
         {
-            id: 'stretch-wrap',
-            name: 'Stretch Wrapping Film',
-            description: 'High-quality stretch film for secure packaging and pallet wrapping',
-            image: 'assets/products/stretch-film2.jpeg'
-        },
-        {
             id: 'garbage-bags',
             name: 'Garbage Bags',
             description: 'Strong and reliable waste management solutions for various applications',
             image: 'assets/products/garbage-bag3.png'
         },
         {
-            id: 'anti-fog',
-            name: 'Anti-fog Films',
-            description: 'Specialized films that prevent condensation and maintain clarity',
-            image: 'assets/products/ANTI FOG CLING FILM_B.jpg'
+            id: 'stretch-wrap',
+            name: 'Stretch Wrapping Film',
+            description: 'High-quality stretch film for secure packaging and pallet wrapping',
+            image: 'assets/products/stretch-film2.jpeg'
         },
         {
             id: 'pp-roofing',
@@ -49,6 +43,12 @@ const Products = ({ isDark }) => {
             name: 'UPVC Roofing Sheet',
             description: 'Durable and weather-resistant roofing solution',
             image: '/assets/products/02.png'
+        },
+        {
+            id: 'anti-fog',
+            name: 'Anti-fog Films',
+            description: 'Specialized films that prevent condensation and maintain clarity',
+            image: 'assets/products/ANTI FOG CLING FILM_B.jpg'
         },
         {
             id: 'pvc-cling',
@@ -75,6 +75,13 @@ const Products = ({ isDark }) => {
             image: 'assets/products/VCI STRETCH FILM _B.jpg'
         },
         {
+            id: 'pp-box-strapping',
+            name: 'PP Box Strapping',
+            description: 'Strong polypropylene strapping for secure box and package binding',
+            image: 'assets/products/box-strapping2.jpg'
+
+        },
+        {
             id: 'grow-bag',
             name: 'Grow Bag',
             description: 'Durable and breathable bags for plant growth',
@@ -85,13 +92,6 @@ const Products = ({ isDark }) => {
             name: 'Silage Film',
             description: 'Specialized film for agricultural silage applications',
             image: 'assets/products/SILAGE FILM.jpg'
-        },
-        {
-            id: 'pp-box-strapping',
-            name: 'PP Box Strapping',
-            description: 'Strong polypropylene strapping for secure box and package binding',
-            image: 'assets/products/box-strapping2.jpg'
-
         },
         // {
         //     id: 'pp-door',
