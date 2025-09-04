@@ -39,6 +39,14 @@ const Hero = () => {
                     >
                         Elevating your products with premium quality packaging solutions for the modern industry
                     </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                        className="text-sm sm:text-base md:text-lg text-red-300 mb-8 sm:mb-12 max-w-xl mx-auto px-4 sm:px-0 font-medium"
+                    >
+                        by JAGANNATH EXTRUSION INDIA LTD.
+                    </motion.p>
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
