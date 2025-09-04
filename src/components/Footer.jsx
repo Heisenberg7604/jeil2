@@ -215,10 +215,18 @@ const Footer = ({ isDark }) => {
             {/* Copyright */}
             <div className={`py-3 sm:py-4 ${isDark ? 'bg-gray-900' : 'bg-black'} border-t border-gray-700`}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center gap-3">
                         <p className="text-xs sm:text-sm text-gray-500 text-center">
                             &copy; {currentYear} JEIL. All rights reserved.
                         </p>
+                        <a
+                            href="https://www.linkedin.com/in/darshan-dorik-07a300259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-500 hover:text-red-400 transition-colors"
+                        >
+                            <Linkedin size={16} />
+                        </a>
                     </div>
                 </div>
             </div>
