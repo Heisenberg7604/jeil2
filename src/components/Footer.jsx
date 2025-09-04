@@ -20,13 +20,13 @@ const Footer = ({ isDark }) => {
                     <div className="sm:col-span-2 lg:col-span-1">
                         <div className="flex items-center mb-4">
                             <img
-                                src="/assets/cropped-jeil-logo.jpg"
+                                src="/assets/cropped-jeil-logo.png"
                                 alt="JEIL Logo"
                                 className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 object-contain"
                             />
                         </div>
                         <p className="mb-4 sm:mb-6 text-gray-400 text-sm sm:text-base">
-                            JAGANNATH EXTRUSION INDIA LTD. and PATKAR EXTRUSIONS LTD. are pioneering forces in the packaging industry, delivering innovative solutions since 1999.
+                            JAGANNATH EXTRUSION INDIA LTD. is a pioneering force in the packaging industry, delivering innovative solutions since 1999.
                         </p>
                         <div className="flex space-x-3 sm:space-x-4">
                             <motion.a
@@ -189,15 +189,6 @@ const Footer = ({ isDark }) => {
                                         </a>
                                     </div>
                                 </div>
-                            </li>
-                            <li className="flex items-center">
-                                <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-red-500 flex-shrink-0" />
-                                <a
-                                    href="mailto:extrusion_India@yahoo.co.in"
-                                    className="text-xs sm:text-sm hover:text-red-400 transition-colors cursor-pointer"
-                                >
-                                    extrusion_India@yahoo.co.in
-                                </a>
                             </li>
                         </ul>
                     </div>

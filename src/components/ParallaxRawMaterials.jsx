@@ -85,7 +85,7 @@ const ParallaxRawMaterials = ({ isDark }) => {
                             transition={{ delay: 0.3, duration: 0.8 }}
                             className="text-xl text-white/90 mb-8 max-w-xl"
                         >
-                            Our raw material solutions range from standard polymers to specialized blends, from HDPE and PP to custom formulations designed for your specific application requirements.
+                            Discover the journey from fundamental materials to innovative solutions. See how our diverse polymer range transforms into the packaging solutions that power industries worldwide.
                         </motion.p>
                         <motion.button
                             initial={{ opacity: 0 }}

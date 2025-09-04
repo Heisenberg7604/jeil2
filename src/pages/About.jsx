@@ -46,7 +46,7 @@ const About = ({ isDark = false }) => {
                             About JEIL
                         </h1>
                         <p className={`text-base sm:text-lg md:text-xl mb-8 sm:mb-12 px-4 sm:px-0 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-                            JAGANNATH EXTRUSION INDIA LTD. and PATKAR EXTRUSIONS LTD. are pioneering forces in the packaging industry,
+                            JAGANNATH EXTRUSION INDIA LTD. is a pioneering force in the packaging industry,
                             delivering innovative solutions that set new standards for quality and reliability.
                         </p>
                     </div>
@@ -172,15 +172,15 @@ const About = ({ isDark = false }) => {
                                                 </p>
                                             </div>
                                         </div>
-                                        
+
                                         <div className={`flex space-x-2 transform ${isHovered ? 'translate-x-0 opacity-100' : 'translate-x-2 opacity-0'} transition-all duration-300`}>
-                                           
+
                                         </div>
                                     </div>
 
                                     <p className={`text-sm sm:text-base md:text-lg mb-4 sm:mb-6 ${isDark ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                                        Our ISO 14001:2015 certification demonstrates our commitment to environmental management 
-                                        and sustainable business practices. This internationally recognized standard ensures we 
+                                        Our ISO 14001:2015 certification demonstrates our commitment to environmental management
+                                        and sustainable business practices. This internationally recognized standard ensures we
                                         minimize our environmental impact while maintaining operational excellence.
                                     </p>
 
@@ -195,7 +195,7 @@ const About = ({ isDark = false }) => {
                                                 <p className={`text-xs sm:text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Compliance</p>
                                             </div>
                                         </div>
-                                        
+
                                         <div className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full ${isDark ? 'bg-red-500/20 text-red-400' : 'bg-red-100 text-red-600'} font-medium transition-all duration-300 group-hover:bg-red-600 group-hover:text-white text-sm sm:text-base`}>
                                             View Certificate
                                         </div>
@@ -259,7 +259,7 @@ const About = ({ isDark = false }) => {
                                 <X className="w-5 h-5 sm:w-6 sm:h-6" />
                             </button>
                         </div>
-                        
+
                         {/* Certificate Display */}
                         <div className="p-3 sm:p-4 md:p-6">
                             <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] rounded-lg overflow-hidden">
@@ -272,7 +272,7 @@ const About = ({ isDark = false }) => {
                                         e.target.nextSibling.style.display = 'flex';
                                     }}
                                 />
-                                <div 
+                                <div
                                     className={`hidden w-full h-full items-center justify-center ${isDark ? 'bg-gray-800' : 'bg-gray-100'} rounded-lg`}
                                 >
                                     <div className="text-center px-4">
@@ -290,7 +290,7 @@ const About = ({ isDark = false }) => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         {/* Modal Footer */}
                         <div className={`flex flex-col sm:flex-row justify-between items-center p-3 sm:p-4 md:p-6 border-t ${isDark ? 'border-gray-700 bg-gray-800' : 'border-gray-200 bg-gray-50'} space-y-3 sm:space-y-0`}>
                             <div className={`text-xs sm:text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'} text-center sm:text-left`}>
