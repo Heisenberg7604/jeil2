@@ -2,7 +2,7 @@ import React from 'react';
 
 const HoverCard = ({
   title = 'Default Title',
-  subtitle = 'Default Subtitle',
+  subtitle,
   address,
   googleMapsUrl,
   phone1,
@@ -33,9 +33,11 @@ const HoverCard = ({
         </h4>
       )}
 
-      <h2 className="text-xl font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white">
-        {subtitle}
-      </h2>
+      {subtitle && (
+        <h2 className="text-xl font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white">
+          {subtitle}
+        </h2>
+      )}
 
       {address && (
         googleMapsUrl ? (
