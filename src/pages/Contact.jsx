@@ -344,38 +344,31 @@ const Contact = ({ isDark = false }) => {
                         Our Network
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                        {/* <OurNetworkcard
-                            title="Head Office"
+                        <OurNetworkcard
                             subtitle="Ankleshwar, Gujarat"
                             address="C1B – 1034 to 1037 GIDC Industrial Estate, Ankleshwar – 393 002, Gujarat – INDIA"
-                            phone1="+91 9324800007"
-                            phone2="+91 9924202318"
-                            emails={['patkar27@gmail.com', 'parsai@pelwrap.com']}
-                            linkText="Visit Location"
-                            linkUrl="https://maps.google.com/?q=C1B+1034+to+1037+GIDC+Industrial+Estate+Ankleshwar+393002+Gujarat+INDIA"
+                            phone1="+91 2646 221134"
+                            phone2="+91 2646 222163"
+                            phone3="+91 2646 251083"
+                            emails={['info@jeil.in']}
+                            googleMapsUrl="https://maps.google.com/?q=C1B+1034+to+1037+GIDC+Industrial+Estate+Ankleshwar+393002+Gujarat+INDIA"
                         />
                         <OurNetworkcard
-                            title="Sales Office"
                             subtitle="Mumbai, Maharashtra"
                             address="A-34, Virwani Industrial Estate, Goregaon (E), Mumbai - 400063, Maharashtra, India"
-                            phone1="+91 9876543210"
-                            phone2="+91 9876543211"
-                            emails={['sales@jeil.in', 'mumbai@jeil.in']}
-                            linkText="Contact Sales"
+                            phone1=""
+                            phone2=""
                             linkUrl="#contact"
                         />
                         <OurNetworkcard
-                            title="Silvassa Works"
-                            subtitle="Survey No:40/1, Shed No-1 Dadra Village, Dadra Nagar Haveli, Silvassa"
-                            address="A-34, Virwani Industrial Estate, Goregaon (E), Mumbai - 400063, Maharashtra, India"
-                            phone1="+91 9876543210"
-                            phone2="+91 9876543211"
-                            emails={['sales@jeil.in', 'mumbai@jeil.in']}
-                            linkText="Contact Sales"
+                            subtitle="Silvassa, Dadra & Nagar Haveli"
+                            address="Survey No:40/1, Shed No-1 Dadra Village, Dadra Nagar Haveli, Silvassa"
+                            phone1="+91 260 2669408"
+                            phone2="+91 260 6453234"
                             linkUrl="#contact"
+                            googleMapsUrl={'https://share.google/W89O9gOQmWStLHR2B'}
                         />
                         <OurNetworkcard
-                            title="Distribution Center"
                             subtitle="Dehej, Gujarat"
                             address="Plot N. D-2/E/21/14, Dahej-II Industrial Estate, Tal. Vagra, Dist. Bharuch - 392110, Gujarat, India"
                             phone1=""
@@ -385,7 +378,6 @@ const Contact = ({ isDark = false }) => {
                             linkUrl="#contact"
                         />
                         <OurNetworkcard
-                            title="Distribution Center"
                             subtitle="Nardana, Maharashtra"
                             address="Plot No. B-2, Nardana Industrial Area, Bhabale - 425504, TA. Shindkheda, Dist. Dhule, Maharashtra 425404."
                             phone1=""
@@ -393,7 +385,8 @@ const Contact = ({ isDark = false }) => {
                             emails={['', '']}
                             linkText=""
                             linkUrl="#contact"
-                        /> */}
+                            googleMapsUrl={'https://share.google/bn537zO8fDRMrFcJd'}
+                        />
                     </div>
                 </div>
             </div>

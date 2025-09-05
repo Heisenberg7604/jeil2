@@ -4,6 +4,7 @@ const HoverCard = ({
   title = 'Default Title',
   subtitle = 'Default Subtitle',
   address,
+  googleMapsUrl,
   phone1,
   phone2,
   phone3,
@@ -26,18 +27,31 @@ const HoverCard = ({
         }}
       ></div>
 
-      <h4 className="text-xl font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white">
-        {title}
-      </h4>
+      {title && (
+        <h4 className="text-xl font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white">
+          {title}
+        </h4>
+      )}
 
       <h2 className="text-xl font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white">
         {subtitle}
       </h2>
 
       {address && (
-        <p className="text-gray-600 text-sm font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white">
-          {address}
-        </p>
+        googleMapsUrl ? (
+          <a
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 text-sm font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white hover:text-red-500 hover:underline cursor-pointer"
+          >
+            {address}
+          </a>
+        ) : (
+          <p className="text-gray-600 text-sm font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white">
+            {address}
+          </p>
+        )
       )}
 
       <div className="flex gap-4 my-2 z-20 transition-colors duration-300 ease-in-out">
