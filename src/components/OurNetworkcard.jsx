@@ -9,7 +9,7 @@ const HoverCard = ({
   phone2,
   phone3,
   emails = [],
-  linkText = 'Learn More',
+  linkText,
   linkUrl = '#contact',
 }) => {
   return (
@@ -95,26 +95,28 @@ const HoverCard = ({
         ))}
       </div>
 
-      <a
-        href={linkUrl}
-        className="flex items-center gap-2 text-sm font-medium text-gray-800 mt-auto no-underline transition-colors duration-300 ease-in-out z-20 group-hover:text-white"
-      >
-        <svg
-          className="w-4 h-4 transition-colors duration-300 ease-in-out"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+      {linkText && linkUrl && (
+        <a
+          href={linkUrl}
+          className="flex items-center gap-2 text-sm font-medium text-gray-800 mt-auto no-underline transition-colors duration-300 ease-in-out z-20 group-hover:text-white"
         >
-          <path
-            d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
-            strokeLinejoin="round"
-            strokeLinecap="round"
-          ></path>
-        </svg>
-        {linkText}
-      </a>
+          <svg
+            className="w-4 h-4 transition-colors duration-300 ease-in-out"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            ></path>
+          </svg>
+          {linkText}
+        </a>
+      )}
     </div>
   );
 };
