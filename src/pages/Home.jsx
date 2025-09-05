@@ -8,14 +8,14 @@ import ParallaxRawMaterials from '../components/ParallaxRawMaterials';
 const Home = ({ isDark }) => {
     const features = [
         {
-            icon: Package,
-            title: "Premium Quality",
-            description: "Industry-leading packaging solutions crafted with precision"
-        },
-        {
             icon: Shield,
             title: "ISO Certified",
             description: "Internationally recognized quality management systems"
+        },
+        {
+            icon: Package,
+            title: "Premium Quality",
+            description: "Industry-leading packaging solutions crafted with precision"
         },
         {
             icon: Truck,

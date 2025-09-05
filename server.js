@@ -16,8 +16,8 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/jeil_cata
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log('Connected to MongoDB'))
-.catch(err => console.error('MongoDB connection error:', err));
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -67,15 +67,15 @@ transporter.verify((error) => {
 app.post('/api/contact', async (req, res) => {
   const startTime = Date.now();
   console.log('📧 Contact form submission started at:', new Date().toISOString());
-  
+
   try {
     const { name, email, company, subject, message } = req.body;
 
     // Validate required fields
     if (!name || !email || !message) {
-      return res.status(400).json({ 
-        success: false, 
-        message: 'Name, email, and message are required' 
+      return res.status(400).json({
+        success: false,
+        message: 'Name, email, and message are required'
       });
     }
 
@@ -153,7 +153,7 @@ app.post('/api/contact', async (req, res) => {
       message,
       visitorIP
     });
-    
+
     await submission.save();
     console.log('💾 Database save completed in:', Date.now() - dbStartTime, 'ms');
 
@@ -166,15 +166,15 @@ app.post('/api/contact', async (req, res) => {
     // Send email
     const emailStartTime = Date.now();
     console.log('📤 Starting email send...');
-    
+
     await transporter.sendMail(mailOptions);
-    
+
     console.log('📨 Email sent successfully in:', Date.now() - emailStartTime, 'ms');
     console.log('⏱️ Total request time:', Date.now() - startTime, 'ms');
 
-    res.status(200).json({ 
-      success: true, 
-      message: 'Email sent successfully' 
+    res.status(200).json({
+      success: true,
+      message: 'Email sent successfully'
     });
 
   } catch (error) {
@@ -185,10 +185,10 @@ app.post('/api/contact', async (req, res) => {
       code: error.code,
       response: error.response
     });
-    
-    res.status(500).json({ 
-      success: false, 
-      message: 'Failed to send email. Please try again later.' 
+
+    res.status(500).json({
+      success: false,
+      message: 'Failed to send email. Please try again later.'
     });
   }
 });
@@ -202,15 +202,15 @@ app.get('/api/health', (req, res) => {
 app.post('/api/download-catalogue', async (req, res) => {
   const startTime = Date.now();
   console.log('📦 Catalogue download request started at:', new Date().toISOString());
-  
+
   try {
     const { name, companyName, email, contactNumber, city, state, country, productName, url } = req.body;
 
     // Validate required fields
     if (!name || !companyName || !email || !contactNumber || !city || !state || !country) {
-      return res.status(400).json({ 
-        success: false, 
-        message: 'All fields are required' 
+      return res.status(400).json({
+        success: false,
+        message: 'All fields are required'
       });
     }
 
@@ -234,7 +234,7 @@ app.post('/api/download-catalogue', async (req, res) => {
       url,
       visitorIP
     });
-    
+
     await submission.save();
     console.log('💾 Catalogue database save completed in:', Date.now() - dbStartTime, 'ms');
 
@@ -307,12 +307,19 @@ app.post('/api/download-catalogue', async (req, res) => {
       html: `
         <div style="font-family: Arial, sans-serif; border: 2px dashed #000; padding: 20px; max-width: 600px; margin: auto;">
           
-          <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px;">Thank you!</h2>
+          <!-- Company Logo -->
+          <div style="text-align: center; margin-bottom: 30px;">
+            <img src="https://jeil.in/assets/cropped-jeil-logo.png" 
+                 alt="Jagannath Extrusion India Ltd." 
+                 style="max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          </div>
+          
+          <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px; color: #dc2626;">Thank you!</h2>
           
           <p style="margin-bottom: 15px;">Dear ${name},</p>
           
           <p style="margin-bottom: 5px;">Awesome!</p>
-          <p style="margin-bottom: 15px;">Thank you for your interest.</p>
+          <p style="margin-bottom: 15px;">Thank you for your interest in our packaging solutions.</p>
           
           <p style="margin-bottom: 15px;">Please click the link below to download your requested catalogue:</p>
           
@@ -335,17 +342,17 @@ app.post('/api/download-catalogue', async (req, res) => {
     // Send email to both the owner and the user
     const emailStartTime = Date.now();
     console.log('📤 Starting catalogue emails send...');
-    
+
     // Send both emails in parallel (no large attachments now)
     await Promise.all([
       transporter.sendMail(ownerMailOptions),
       transporter.sendMail(userMailOptions)
     ]);
-    
+
     console.log('📨 All catalogue emails sent successfully in:', Date.now() - emailStartTime, 'ms');
     console.log('⏱️ Total catalogue request time:', Date.now() - startTime, 'ms');
 
-    res.status(200).json({ 
+    res.status(200).json({
       success: true,
       message: "Request received. Your catalogue will be emailed shortly.",
       totalTime: Date.now() - startTime
@@ -359,19 +366,19 @@ app.post('/api/download-catalogue', async (req, res) => {
       code: error.code,
       response: error.response
     });
-    
-    res.status(500).json({ 
-      success: false, 
-      message: 'Failed to send catalogue. Please try again later.' 
+
+    res.status(500).json({
+      success: false,
+      message: 'Failed to send catalogue. Please try again later.'
     });
   }
 });
 
 // Serve React app for all other routes
 app.get('*', (req, res) => {
-  res.status(404).json({ 
-    error: 'Route not found', 
-    message: 'This is an API server. Use the React dev server for the frontend.' 
+  res.status(404).json({
+    error: 'Route not found',
+    message: 'This is an API server. Use the React dev server for the frontend.'
   });
 });
 
