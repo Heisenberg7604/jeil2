@@ -343,9 +343,10 @@ const Contact = ({ isDark = false }) => {
                     <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 ${isDark ? 'text-white' : 'text-gray-800'}`}>
                         Our Network
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    {/* First row - 3 cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
                         <OurNetworkcard
-                            subtitle="Ankleshwar, Gujarat"
+                            title="Ankleshwar, Gujarat"
                             address="C1B – 1034 to 1037 GIDC Industrial Estate, Ankleshwar – 393 002, Gujarat – INDIA"
                             phone1="+91 2646 221134"
                             phone2="+91 2646 222163"
@@ -354,39 +355,46 @@ const Contact = ({ isDark = false }) => {
                             googleMapsUrl="https://maps.google.com/?q=C1B+1034+to+1037+GIDC+Industrial+Estate+Ankleshwar+393002+Gujarat+INDIA"
                         />
                         <OurNetworkcard
-                            subtitle="Mumbai, Maharashtra"
+                            title="Mumbai, Maharashtra"
                             address="A-34, Virwani Industrial Estate, Goregaon (E), Mumbai - 400063, Maharashtra, India"
                             phone1=""
                             phone2=""
                             linkUrl="#contact"
                         />
                         <OurNetworkcard
-                            subtitle="Silvassa, Dadra & Nagar Haveli"
+                            title="Silvassa, Dadra & Nagar Haveli"
                             address="Survey No:40/1, Shed No-1 Dadra Village, Dadra Nagar Haveli, Silvassa"
                             phone1="+91 260 2669408"
                             phone2="+91 260 6453234"
                             linkUrl="#contact"
                             googleMapsUrl={'https://share.google/W89O9gOQmWStLHR2B'}
                         />
-                        <OurNetworkcard
-                            subtitle="Dehej, Gujarat"
-                            address="Plot N. D-2/E/21/14, Dahej-II Industrial Estate, Tal. Vagra, Dist. Bharuch - 392110, Gujarat, India"
-                            phone1=""
-                            phone2=""
-                            emails={['', '']}
-                            linkText=""
-                            linkUrl="#contact"
-                        />
-                        <OurNetworkcard
-                            subtitle="Nardana, Maharashtra"
-                            address="Plot No. B-2, Nardana Industrial Area, Bhabale - 425504, TA. Shindkheda, Dist. Dhule, Maharashtra 425404."
-                            phone1=""
-                            phone2=""
-                            emails={['', '']}
-                            linkText=""
-                            linkUrl="#contact"
-                            googleMapsUrl={'https://share.google/bn537zO8fDRMrFcJd'}
-                        />
+                    </div>
+
+                    {/* Second row - 2 cards centered */}
+                    <div className="flex justify-center">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl">
+                            <OurNetworkcard
+                                title="Dehej, Gujarat"
+                                address="Plot N. D-2/E/21/14, Dahej-II Industrial Estate, Tal. Vagra, Dist. Bharuch - 392110, Gujarat, India"
+                                phone1=""
+                                phone2=""
+                                emails={['', '']}
+                                linkText=""
+                                linkUrl="#contact"
+                                googleMapsUrl={'https://share.google/AnK2hnHq2PDyc3PIn'}
+                            />
+                            <OurNetworkcard
+                                title="Nardana, Maharashtra"
+                                address="Plot No. B-2, Nardana Industrial Area, Bhabale - 425504, TA. Shindkheda, Dist. Dhule, Maharashtra 425404."
+                                phone1=""
+                                phone2=""
+                                emails={['', '']}
+                                linkText=""
+                                linkUrl="#contact"
+                                googleMapsUrl={'https://share.google/bn537zO8fDRMrFcJd'}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
