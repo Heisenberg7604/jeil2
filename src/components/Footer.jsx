@@ -223,7 +223,7 @@ const Footer = ({ isDark }) => {
                             href="https://www.linkedin.com/in/darshan-dorik-07a300259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-500 hover:text-red-400 transition-colors"
+                            className="text-gray-500 hover:text-blue-400 transition-colors"
                         >
                             <Linkedin size={16} />
                         </a>
