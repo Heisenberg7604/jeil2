@@ -11,9 +11,13 @@ const HoverCard = ({
   emails = [],
   linkText,
   linkUrl = '#contact',
+  isDark = false,
 }) => {
   return (
-    <div className="relative bg-white cursor-pointer flex flex-col gap-4 justify-between rounded-2xl border border-gray-300 p-4 px-8 overflow-hidden transition-all duration-300 ease-in-out z-10 hover:border-red-500 hover:-translate-y-1 hover:shadow-lg group">
+    <div className={`relative cursor-pointer flex flex-col gap-4 justify-between rounded-2xl border p-4 px-8 overflow-hidden transition-all duration-300 ease-in-out z-10 hover:border-red-500 hover:-translate-y-1 hover:shadow-lg group ${isDark
+        ? 'bg-gray-800 border-gray-600 hover:shadow-red-500/20'
+        : 'bg-white border-gray-300'
+      }`}>
       {/* Red background overlay */}
       <div className="absolute top-0 left-0 h-full w-0 bg-red-500 transition-all duration-300 ease-in-out z-[-1] group-hover:w-full"></div>
 
@@ -28,13 +32,15 @@ const HoverCard = ({
       ></div>
 
       {title && (
-        <h4 className="text-xl font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white">
+        <h4 className={`text-xl font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white ${isDark ? 'text-white' : 'text-gray-900'
+          }`}>
           {title}
         </h4>
       )}
 
       {subtitle && (
-        <h2 className="text-xl font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white">
+        <h2 className={`text-xl font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white ${isDark ? 'text-white' : 'text-gray-900'
+          }`}>
           {subtitle}
         </h2>
       )}
@@ -45,12 +51,14 @@ const HoverCard = ({
             href={googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 text-sm font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white hover:text-red-500 hover:underline cursor-pointer"
+            className={`text-sm font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white hover:text-red-500 hover:underline cursor-pointer ${isDark ? 'text-gray-300' : 'text-gray-600'
+              }`}
           >
             {address}
           </a>
         ) : (
-          <p className="text-gray-600 text-sm font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white">
+          <p className={`text-sm font-medium transition-colors duration-300 ease-in-out z-20 group-hover:text-white ${isDark ? 'text-gray-300' : 'text-gray-600'
+            }`}>
             {address}
           </p>
         )
@@ -60,7 +68,8 @@ const HoverCard = ({
         {phone1 && (
           <a
             href={`tel:${phone1}`}
-            className="text-gray-800 text-base font-medium transition-colors duration-300 ease-in-out group-hover:text-white hover:text-white hover:text-opacity-80 hover:underline"
+            className={`text-base font-medium transition-colors duration-300 ease-in-out group-hover:text-white hover:text-white hover:text-opacity-80 hover:underline ${isDark ? 'text-gray-200' : 'text-gray-800'
+              }`}
           >
             {phone1}
           </a>
@@ -68,7 +77,8 @@ const HoverCard = ({
         {phone2 && (
           <a
             href={`tel:${phone2}`}
-            className="text-gray-800 text-base font-medium transition-colors duration-300 ease-in-out group-hover:text-white hover:text-white hover:text-opacity-80 hover:underline"
+            className={`text-base font-medium transition-colors duration-300 ease-in-out group-hover:text-white hover:text-white hover:text-opacity-80 hover:underline ${isDark ? 'text-gray-200' : 'text-gray-800'
+              }`}
           >
             {phone2}
           </a>
@@ -76,7 +86,8 @@ const HoverCard = ({
         {phone3 && (
           <a
             href={`tel:${phone3}`}
-            className="text-gray-800 text-base font-medium transition-colors duration-300 ease-in-out group-hover:text-white hover:text-white hover:text-opacity-80 hover:underline"
+            className={`text-base font-medium transition-colors duration-300 ease-in-out group-hover:text-white hover:text-white hover:text-opacity-80 hover:underline ${isDark ? 'text-gray-200' : 'text-gray-800'
+              }`}
           >
             {phone3}
           </a>
@@ -88,7 +99,8 @@ const HoverCard = ({
           <a
             key={index}
             href={`mailto:${email}`}
-            className="text-gray-800 text-xl font-medium transition-colors duration-300 ease-in-out whitespace-nowrap z-20 group-hover:text-white hover:text-white hover:text-opacity-80 hover:underline"
+            className={`text-xl font-medium transition-colors duration-300 ease-in-out whitespace-nowrap z-20 group-hover:text-white hover:text-white hover:text-opacity-80 hover:underline ${isDark ? 'text-gray-200' : 'text-gray-800'
+              }`}
           >
             {email}
           </a>
@@ -98,7 +110,8 @@ const HoverCard = ({
       {linkText && linkUrl && (
         <a
           href={linkUrl}
-          className="flex items-center gap-2 text-sm font-medium text-gray-800 mt-auto no-underline transition-colors duration-300 ease-in-out z-20 group-hover:text-white"
+          className={`flex items-center gap-2 text-sm font-medium mt-auto no-underline transition-colors duration-300 ease-in-out z-20 group-hover:text-white ${isDark ? 'text-gray-200' : 'text-gray-800'
+            }`}
         >
           <svg
             className="w-4 h-4 transition-colors duration-300 ease-in-out"

@@ -353,6 +353,7 @@ const Contact = ({ isDark = false }) => {
                             phone3="+91 2646 251083"
                             emails={['info@jeil.in']}
                             googleMapsUrl="https://maps.google.com/?q=C1B+1034+to+1037+GIDC+Industrial+Estate+Ankleshwar+393002+Gujarat+INDIA"
+                            isDark={isDark}
                         />
                         <OurNetworkcard
                             title="Mumbai, Maharashtra"
@@ -360,6 +361,7 @@ const Contact = ({ isDark = false }) => {
                             phone1=""
                             phone2=""
                             linkUrl="#contact"
+                            isDark={isDark}
                         />
                         <OurNetworkcard
                             title="Silvassa, Dadra & Nagar Haveli"
@@ -368,6 +370,7 @@ const Contact = ({ isDark = false }) => {
                             phone2="+91 260 6453234"
                             linkUrl="#contact"
                             googleMapsUrl={'https://share.google/W89O9gOQmWStLHR2B'}
+                            isDark={isDark}
                         />
                     </div>
 
@@ -383,6 +386,7 @@ const Contact = ({ isDark = false }) => {
                                 linkText=""
                                 linkUrl="#contact"
                                 googleMapsUrl={'https://share.google/AnK2hnHq2PDyc3PIn'}
+                                isDark={isDark}
                             />
                             <OurNetworkcard
                                 title="Nardana, Maharashtra"
@@ -393,6 +397,7 @@ const Contact = ({ isDark = false }) => {
                                 linkText=""
                                 linkUrl="#contact"
                                 googleMapsUrl={'https://share.google/bn537zO8fDRMrFcJd'}
+                                isDark={isDark}
                             />
                         </div>
                     </div>
