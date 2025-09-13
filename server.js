@@ -280,7 +280,7 @@ app.post('/api/download-catalogue', async (req, res) => {
     const ownerMailOptions = {
       from: 'marcom.jeil@gmail.com', // Use Gmail as sender
       to: ["info@jeil.in", "nilesh@pelwrap.com"], // Send notifications to both your emails
-      subject: `Download Catalogue Request - ${productName} | J P Extrusiontech Private Limited`,
+      subject: `Download Catalogue Request - ${productName} | Jagannath Extrusion India Limited`,
       html: `
         <div style="font-family: Arial, sans-serif; border: 2px dashed #000; padding: 20px; max-width: 600px; margin: auto; background-color: #F7F7F7;">
           
@@ -456,7 +456,7 @@ app.post('/api/request-brochure', async (req, res) => {
     const ownerMailOptions = {
       from: 'marcom.jeil@gmail.com', // Use Gmail as sender
       to: ["info@jeil.in", "nilesh@pelwrap.com"], // Send notifications to both your emails
-      subject: `Brochure Request - ${productName} | J P Extrusiontech Private Limited`,
+      subject: `Brochure Request - ${productName} | Jagannath Extrusion India Limited`,
       html: `
         <div style="font-family: Arial, sans-serif; border: 2px dashed #000; padding: 20px; max-width: 600px; margin: auto; background-color: #F7F7F7;">
           
@@ -511,7 +511,7 @@ app.post('/api/request-brochure', async (req, res) => {
     const userMailOptions = {
       from: 'pelwrap.media@gmail.com', // Use Gmail as sender for consistency
       to: email, // User's email from the form
-      subject: "Thank you for your interest | J P Extrusiontech Private Limited",
+      subject: "Thank you for your interest | Patkar Extrusions Private Limited",
       html: `
         <div style="font-family: Arial, sans-serif; border: 2px dashed #000; padding: 20px; max-width: 600px; margin: auto;">
           
