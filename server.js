@@ -477,7 +477,7 @@ app.post('/api/request-brochure', async (req, res) => {
 
     // Define the email content for the user (with download link instead of attachment for faster sending)
     const userMailOptions = {
-      from: 'marcom.jeil@gmail.com', // Use Gmail as sender for consistency
+      from: 'pelwrap.media@gmail.com', // Use Gmail as sender for consistency
       to: email, // User's email from the form
       subject: "Thank you for your interest | J P Extrusiontech Private Limited",
       html: `
