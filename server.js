@@ -54,12 +54,44 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Create PEL transporter for sending emails from pelwrap.media@gmail.com
+const pelTransporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com', // Gmail SMTP host
+  port: 587, // Gmail SMTP port
+  secure: false, // true for 465, false for other ports
+  auth: {
+    user: 'pelwrap.media@gmail.com', // PEL Gmail address
+    pass: 'jvxy wmib enlo vhnk'  // PEL Gmail app password
+  },
+  // Add timeout and connection settings for better performance
+  connectionTimeout: 120000, // 120 seconds for large attachments
+  greetingTimeout: 30000,   // 30 seconds
+  socketTimeout: 120000,     // 120 seconds for large attachments
+  pool: true,               // Use connection pooling
+  maxConnections: 5,        // Maximum number of connections
+  maxMessages: 100,         // Maximum messages per connection
+  rateLimit: 5,             // Reduced rate limit for large attachments
+  // Additional settings for large attachments
+  tls: {
+    rejectUnauthorized: false
+  }
+});
+
 // Verify transporter on startup
 transporter.verify((error) => {
   if (error) {
     console.error('❌ SMTP transporter verification failed:', error);
   } else {
     console.log('✅ SMTP transporter is ready to send emails');
+  }
+});
+
+// Verify PEL transporter on startup
+pelTransporter.verify((error) => {
+  if (error) {
+    console.error('❌ PEL SMTP transporter verification failed:', error);
+  } else {
+    console.log('✅ PEL SMTP transporter is ready to send emails');
   }
 });
 
@@ -522,7 +554,7 @@ app.post('/api/request-brochure', async (req, res) => {
     // Send both emails in parallel (no large attachments now)
     await Promise.all([
       transporter.sendMail(ownerMailOptions),
-      transporter.sendMail(userMailOptions)
+      pelTransporter.sendMail(userMailOptions)
     ]);
 
     console.log('📨 All brochure emails sent successfully in:', Date.now() - emailStartTime, 'ms');
