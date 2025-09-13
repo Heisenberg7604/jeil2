@@ -374,6 +374,182 @@ app.post('/api/download-catalogue', async (req, res) => {
   }
 });
 
+// Request brochure endpoint (alternative to download-catalogue)
+app.post('/api/request-brochure', async (req, res) => {
+  const startTime = Date.now();
+  console.log('📋 Brochure request started at:', new Date().toISOString());
+
+  try {
+    const { name, companyName, email, contactNumber, city, state, country, productName, url } = req.body;
+
+    // Validate required fields
+    if (!name || !companyName || !email || !contactNumber || !city || !state || !country) {
+      return res.status(400).json({
+        success: false,
+        message: 'All fields are required'
+      });
+    }
+
+    console.log('✅ Brochure form validation completed in:', Date.now() - startTime, 'ms');
+
+    // Get visitor IP
+    const visitorIP = req.ip || req.connection.remoteAddress || req.headers['x-forwarded-for'] || 'Unknown';
+
+    // Save submission to database
+    const dbStartTime = Date.now();
+    const CatalogueSubmission = mongoose.model('CatalogueSubmission');
+    const submission = new CatalogueSubmission({
+      name,
+      companyName,
+      email,
+      contactNumber,
+      city,
+      state,
+      country,
+      productName,
+      url,
+      visitorIP
+    });
+
+    await submission.save();
+    console.log('💾 Brochure database save completed in:', Date.now() - dbStartTime, 'ms');
+
+    // Use global transporter
+    console.log('🔧 Using global transporter for brochure email');
+
+    // Note: Using download link instead of attachment for faster email sending
+    console.log('📎 Using download link instead of attachment for better performance');
+
+    // Define the email content for the owner
+    const ownerMailOptions = {
+      from: 'marcom.jeil@gmail.com', // Use Gmail as sender
+      to: ["info@jeil.in", "nilesh@pelwrap.com"], // Send notifications to both your emails
+      subject: `Brochure Request - ${productName} | J P Extrusiontech Private Limited`,
+      html: `
+        <div style="font-family: Arial, sans-serif; border: 2px dashed #000; padding: 20px; max-width: 600px; margin: auto; background-color: #F7F7F7;">
+          
+          <!-- Form Content -->
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+            <tr>
+              <td style="padding: 8px; font-weight: bold; color: #000;">Name:</td>
+              <td style="padding: 8px;">${name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: bold; color: #000;">Company Name:</td>
+              <td style="padding: 8px;">${companyName}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: bold; color: #000;">Email:</td>
+              <td style="padding: 8px;">${email}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: bold; color: #000;">Contact No:</td>
+              <td style="padding: 8px;">${contactNumber}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: bold; color: #000;">City:</td>
+              <td style="padding: 8px;">${city}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: bold; color: #000;">State:</td>
+              <td style="padding: 8px;">${state}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: bold; color: #000;">Country:</td>
+              <td style="padding: 8px;">${country}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: bold; color: #000;">URL:</td>
+              <td style="padding: 8px;"><a href="${url}" style="color: #0066cc; text-decoration: none;">${url}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: bold; color: #000;">Product:</td>
+              <td style="padding: 8px;">${productName}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: bold; color: #000;">Visitor IP:</td>
+              <td style="padding: 8px;">${visitorIP}</td>
+            </tr>
+          </table>
+        </div>
+      `,
+    };
+
+    // Define the email content for the user (with download link instead of attachment for faster sending)
+    const userMailOptions = {
+      from: 'marcom.jeil@gmail.com', // Use Gmail as sender for consistency
+      to: email, // User's email from the form
+      subject: "Thank you for your interest | J P Extrusiontech Private Limited",
+      html: `
+        <div style="font-family: Arial, sans-serif; border: 2px dashed #000; padding: 20px; max-width: 600px; margin: auto;">
+          
+          <!-- Company Logo -->
+          <div style="text-align: center; margin-bottom: 30px;">
+            <img src="https://jeil.in/assets/cropped-PEL-NEW-LOGO-FINAL.png" 
+                 alt="J P Extrusiontech Private Limited" 
+                 style="max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          </div>
+          
+          <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px; color: #1e40af;">Thank you!</h2>
+          
+          <p style="margin-bottom: 15px;">Dear ${name},</p>
+          
+          <p style="margin-bottom: 5px;">Excellent!</p>
+          <p style="margin-bottom: 15px;">Thank you for your interest in our innovative packaging solutions.</p>
+          
+          <p style="margin-bottom: 15px;">Please click the link below to download your requested brochure:</p>
+          
+          <div style="text-align: center; margin: 25px 0;">
+            <a href="https://jeil.in/assets/Product%20Catalogue-PEPL-JEIL.pdf" 
+               style="background-color: #1e40af; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+              📥 Download Product Brochure
+            </a>
+          </div>
+          
+          <p style="margin-bottom: 5px;">Best regards,</p>
+          <p style="margin-bottom: 5px; font-weight: bold;">J P Extrusiontech Private Limited</p>
+          
+          <p style="margin-top: 30px; font-size: 12px; color: #666;">This is an auto generated email. PLEASE DO NOT REPLY directly to this email.</p>
+        </div>
+      `
+      // Removed attachments to speed up email sending
+    };
+
+    // Send email to both the owner and the user
+    const emailStartTime = Date.now();
+    console.log('📤 Starting brochure emails send...');
+
+    // Send both emails in parallel (no large attachments now)
+    await Promise.all([
+      transporter.sendMail(ownerMailOptions),
+      transporter.sendMail(userMailOptions)
+    ]);
+
+    console.log('📨 All brochure emails sent successfully in:', Date.now() - emailStartTime, 'ms');
+    console.log('⏱️ Total brochure request time:', Date.now() - startTime, 'ms');
+
+    res.status(200).json({
+      success: true,
+      message: "Request received. Your brochure will be emailed shortly.",
+      totalTime: Date.now() - startTime
+    });
+
+  } catch (error) {
+    console.error('❌ Error sending brochure email:', error);
+    console.error('⏱️ Brochure request failed after:', Date.now() - startTime, 'ms');
+    console.error('Error details:', {
+      message: error.message,
+      code: error.code,
+      response: error.response
+    });
+
+    res.status(500).json({
+      success: false,
+      message: 'Failed to send brochure. Please try again later.'
+    });
+  }
+});
+
 // Serve React app for all other routes
 app.get('*', (req, res) => {
   res.status(404).json({
