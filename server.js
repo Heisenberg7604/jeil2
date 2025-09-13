@@ -539,7 +539,7 @@ app.post('/api/request-brochure', async (req, res) => {
           </div>
           
           <p style="margin-bottom: 5px;">Best regards,</p>
-          <p style="margin-bottom: 5px; font-weight: bold;">J P Extrusiontech Private Limited</p>
+          <p style="margin-bottom: 5px; font-weight: bold;">Patkar Extrusions Private Limited</p>
           
           <p style="margin-top: 30px; font-size: 12px; color: #666;">This is an auto generated email. PLEASE DO NOT REPLY directly to this email.</p>
         </div>
